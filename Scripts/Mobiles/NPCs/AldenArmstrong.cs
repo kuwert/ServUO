@@ -45,8 +45,6 @@ namespace Server.Engines.Quests
 
             // 1077668 You feel like practicing combat here would really help you learn to fight better. Your ability to raise your Tactics skill is enhanced in this area.
             // 1077669 You feel less able to absorb the lessons of combat. Your Tactics learning potential is no longer enhanced.
-
-            AddReward(new BaseReward(typeof(ArmsOfArmstrong), 1077675));
         }
 
         public override bool CanOffer()

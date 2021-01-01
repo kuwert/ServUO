@@ -26,11 +26,6 @@ namespace Server.Engines.Quests
 
         private readonly Type[][] _Table =
         {
-            new Type[] { typeof(BritchesOfWarding), typeof(GargishBritchesOfWarding) },
-            new Type[] { typeof(GlovesOfFeudalGrip), typeof(GargishKiltOfFeudalVise) },
-            new Type[] { typeof(CuffsOfTheArchmage), typeof(GargishCuffsOfTheArchmage) },
-            new Type[] { typeof(BritchesOfWarding), typeof(GargishBritchesOfWarding) },
-            new Type[] { typeof(BowOfTheInfiniteSwarm), typeof(GlaiveOfTheInfiniteSwarm) }
         };
 
         public override bool OnDragDrop(Mobile from, Item dropped)

@@ -97,43 +97,11 @@ namespace Server.Engines.Points
         public static Type[] DoomArtifacts => m_DoomArtifact;
         private static readonly Type[] m_DoomArtifact = new Type[]
         {
-            typeof(LegacyOfTheDreadLord),       typeof(TheTaskmaster),              typeof(TheDragonSlayer),
-            typeof(ArmorOfFortune),             typeof(GauntletsOfNobility),        typeof(HelmOfInsight),
-            typeof(HolyKnightsBreastplate),     typeof(JackalsCollar),              typeof(LeggingsOfBane),
-            typeof(MidnightBracers),            typeof(OrnateCrownOfTheHarrower),   typeof(ShadowDancerLeggings),
-            typeof(TunicOfFire),                typeof(VoiceOfTheFallenKing),       typeof(BraceletOfHealth),
-            typeof(OrnamentOfTheMagician),      typeof(RingOfTheElements),          typeof(RingOfTheVile),
-            typeof(Aegis),                      typeof(ArcaneShield),               typeof(AxeOfTheHeavens),
-            typeof(BladeOfInsanity),            typeof(BoneCrusher),                typeof(BreathOfTheDead),
-            typeof(Frostbringer),               typeof(SerpentsFang),               typeof(StaffOfTheMagi),
-            typeof(TheBeserkersMaul),           typeof(TheDryadBow),                typeof(DivineCountenance),
-            typeof(HatOfTheMagi),               typeof(HuntersHeaddress),           typeof(SpiritOfTheTotem)
         };
 
         public static Type[][] RewardTable => m_RewardTable;
         private static readonly Type[][] m_RewardTable = new Type[][]
         {
-            new Type[] { typeof(HatOfTheMagi) },            new Type[] { typeof(StaffOfTheMagi) },      new Type[] { typeof(OrnamentOfTheMagician) },
-            new Type[] { typeof(ShadowDancerLeggings) },    new Type[] {typeof(RingOfTheElements) },    new Type[] { typeof(GauntletsOfNobility) },
-            new Type[] { typeof(LeggingsOfBane) },          new Type[] { typeof(MidnightBracers) },     new Type[] { typeof(Glenda) },
-            new Type[] { typeof(BowOfTheInfiniteSwarm) },   new Type[] { typeof(TheDeceiver) },         new Type[] { typeof(TheScholarsHalo) },
-            new Type[] { typeof(DoomRecipeScroll) },
-            new Type[]
-            {
-                typeof(LegacyOfTheDreadLord),       typeof(TheTaskmaster),
-                typeof(ArmorOfFortune),             typeof(HelmOfInsight),
-                typeof(HolyKnightsBreastplate),     typeof(JackalsCollar),
-                typeof(OrnateCrownOfTheHarrower),   typeof(TheDragonSlayer),
-                typeof(TunicOfFire),                typeof(VoiceOfTheFallenKing),
-                typeof(RingOfTheVile),              typeof(BraceletOfHealth),
-                typeof(Aegis),                      typeof(ArcaneShield),
-                typeof(BladeOfInsanity),            typeof(BoneCrusher),
-                typeof(Frostbringer),               typeof(SerpentsFang),
-                typeof(TheBeserkersMaul),           typeof(TheDryadBow),
-                typeof(HuntersHeaddress),           typeof(SpiritOfTheTotem),
-                typeof(AxeOfTheHeavens),            typeof(BreathOfTheDead),
-                typeof(DivineCountenance)
-            }
         };
 
         public override void Serialize(GenericWriter writer)

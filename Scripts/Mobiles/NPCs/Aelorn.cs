@@ -38,8 +38,6 @@ namespace Server.Engines.Quests
 
             // 1077720 Your Chivalry potential is greatly enhanced while questing in this area.
             // 1077721 You are not in the quest area for Apprentice Paladin. Your Chivalry potential is not enhanced here.
-
-            AddReward(new BaseReward(typeof(BulwarkLeggings), 1077727));
         }
 
         public override bool CanOffer()

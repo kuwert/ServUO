@@ -8,8 +8,6 @@ namespace Server.Engines.Quests
             : base()
         {
             AddObjective(new ObtainObjective(typeof(ArielHavenWritofMembership), "Ariel Haven Writ of Membership", 4, 0x2831));
-
-            AddReward(new BaseReward(typeof(CandlewoodTorch), "Candlewood Torch"));
         }
 
         public override bool DoneOnce => true;
