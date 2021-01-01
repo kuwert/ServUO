@@ -46,8 +46,6 @@ namespace Server.Engines.Quests
 
             // 1077677 You feel fresh and are eager to heal wounds. Your ability to improve your Healing skill is enhanced in this area.
             // 1077678 You feel as if you've seen enough blood to last a lifetime. Your Healing learning potential is no longer enhanced.
-
-            AddReward(new BaseReward(typeof(HealersTouch), 1077684));
         }
 
         public override bool CanOffer()

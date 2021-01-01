@@ -29,46 +29,9 @@ namespace Server.Items
                 ((CrystallineRing)item).Attributes.CastRecovery = 3;
             }
 
-            if (item is HumanFeyLeggings)
-            {
-                HumanFeyLeggings fey = (HumanFeyLeggings)item;
-
-                if (fey.PhysicalBonus != 3)
-                    fey.PhysicalBonus = 3;
-
-                if (fey.FireBonus != 3)
-                    fey.FireBonus = 3;
-
-                if (fey.ColdBonus != 3)
-                    fey.ColdBonus = 3;
-
-                if (fey.EnergyBonus != 3)
-                    fey.EnergyBonus = 3;
-            }
-
             if (item is FoldedSteelGlasses && ((FoldedSteelGlasses)item).Attributes.DefendChance != 25)
             {
                 ((FoldedSteelGlasses)item).Attributes.DefendChance = 25;
-            }
-
-            if (item is HeartOfTheLion)
-            {
-                HeartOfTheLion lion = (HeartOfTheLion)item;
-
-                if (lion.PhysicalBonus != 5)
-                    lion.PhysicalBonus = 5;
-
-                if (lion.FireBonus != 5)
-                    lion.FireBonus = 5;
-
-                if (lion.ColdBonus != 5)
-                    lion.ColdBonus = 5;
-
-                if (lion.PoisonBonus != 5)
-                    lion.PoisonBonus = 5;
-
-                if (lion.EnergyBonus != 5)
-                    lion.EnergyBonus = 5;
             }
 
             if (item is HuntersHeaddress)
@@ -99,14 +62,6 @@ namespace Server.Items
             if (item is MaceAndShieldGlasses && ((MaceAndShieldGlasses)item).Attributes.WeaponDamage != 10)
             {
                 ((MaceAndShieldGlasses)item).Attributes.WeaponDamage = 10;
-            }
-
-            if (item is VesperOrderShield && ((VesperOrderShield)item).Attributes.CastSpeed != 0)
-            {
-                ((VesperOrderShield)item).Attributes.CastSpeed = 0;
-
-                if (item.Name != "Order Shield")
-                    item.Name = "Order Shield";
             }
 
             if (item is OrnamentOfTheMagician && ((OrnamentOfTheMagician)item).Attributes.RegenMana != 3)
@@ -159,26 +114,6 @@ namespace Server.Items
             if (item is Stormgrip && ((Stormgrip)item).Attributes.AttackChance != 10)
             {
                 ((Stormgrip)item).Attributes.AttackChance = 10;
-            }
-
-            if (item is InquisitorsResolution)
-            {
-                InquisitorsResolution inquis = (InquisitorsResolution)item;
-
-                if (inquis.PhysicalBonus != 5)
-                    inquis.PhysicalBonus = 5;
-
-                if (inquis.FireBonus != 7)
-                    inquis.FireBonus = 7;
-
-                if (inquis.ColdBonus != -2)
-                    inquis.ColdBonus = -2;
-
-                if (inquis.PoisonBonus != 7)
-                    inquis.PoisonBonus = 7;
-
-                if (inquis.EnergyBonus != -7)
-                    inquis.EnergyBonus = -7;
             }
 
             if (item is TomeOfLostKnowledge && ((TomeOfLostKnowledge)item).Attributes.RegenMana != 3)

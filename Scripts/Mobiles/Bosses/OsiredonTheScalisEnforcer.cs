@@ -30,9 +30,9 @@ namespace Server.Mobiles
         public override double TreasureMapChance => .50;
         public override int TreasureMapLevel => 7;
 
-        public override Type[] UniqueList => new Type[] { typeof(EnchantedCoralBracelet), typeof(WandOfThunderingGlory), typeof(LeviathanHideBracers), typeof(SmilingMoonBlade) };
-        public override Type[] SharedList => new Type[] { typeof(MiniSoulForgeDeed) };
-        public override Type[] DecorativeList => new Type[] { typeof(EnchantedBladeDeed), typeof(EnchantedVortexDeed) };
+        public override Type[] UniqueList => new Type[] { };
+        public override Type[] SharedList => new Type[] { };
+        public override Type[] DecorativeList => new Type[] { };
 
         public override bool NoGoodies => true;
 

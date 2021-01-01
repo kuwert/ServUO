@@ -289,43 +289,20 @@ namespace Server.Engines.Craft
 
             int index;
 
-            #region Metal Armor
-
-            #region Ringmail
             AddCraft(typeof(RingmailGloves), 1111704, 1025099, 12.0, 62.0, typeof(IronIngot), 1044036, 10, 1044037);
             AddCraft(typeof(RingmailLegs), 1111704, 1025104, 19.4, 69.4, typeof(IronIngot), 1044036, 16, 1044037);
             AddCraft(typeof(RingmailArms), 1111704, 1025103, 16.9, 66.9, typeof(IronIngot), 1044036, 14, 1044037);
             AddCraft(typeof(RingmailChest), 1111704, 1025100, 21.9, 71.9, typeof(IronIngot), 1044036, 18, 1044037);
-            #endregion
 
-            #region Chainmail
             AddCraft(typeof(ChainCoif), 1111704, 1025051, 14.5, 64.5, typeof(IronIngot), 1044036, 10, 1044037);
             AddCraft(typeof(ChainLegs), 1111704, 1025054, 36.7, 86.7, typeof(IronIngot), 1044036, 18, 1044037);
             AddCraft(typeof(ChainChest), 1111704, 1025055, 39.1, 89.1, typeof(IronIngot), 1044036, 20, 1044037);
-            #endregion
-
-            #region Platemail
             AddCraft(typeof(PlateArms), 1111704, 1025136, 66.3, 116.3, typeof(IronIngot), 1044036, 18, 1044037);
             AddCraft(typeof(PlateGloves), 1111704, 1025140, 58.9, 108.9, typeof(IronIngot), 1044036, 12, 1044037);
             AddCraft(typeof(PlateGorget), 1111704, 1025139, 56.4, 106.4, typeof(IronIngot), 1044036, 10, 1044037);
             AddCraft(typeof(PlateLegs), 1111704, 1025137, 68.8, 118.8, typeof(IronIngot), 1044036, 20, 1044037);
             AddCraft(typeof(PlateChest), 1111704, 1046431, 75.0, 125.0, typeof(IronIngot), 1044036, 25, 1044037);
             AddCraft(typeof(FemalePlateChest), 1111704, 1046430, 44.1, 94.1, typeof(IronIngot), 1044036, 20, 1044037);
-
-            AddCraft(typeof(DragonBardingDeed), 1111704, 1053012, 72.5, 122.5, typeof(IronIngot), 1044036, 750, 1044037);
-
-            index = AddCraft(typeof(PlateMempo), 1111704, 1030180, 80.0, 130.0, typeof(IronIngot), 1044036, 18, 1044037);
-
-            index = AddCraft(typeof(PlateDo), 1111704, 1030184, 80.0, 130.0, typeof(IronIngot), 1044036, 28, 1044037);
-            //Double check skill
-
-            AddRes(index, typeof(LeggingsOfBane), 1061100, 1, 1053098);
-            AddRes(index, typeof(Turquoise), 1032691, 4, 1053098);
-            AddRes(index, typeof(BloodOfTheDarkFather), 1157343, 5, 1053098);
-            AddRecipe(index, (int)SmithRecipes.BritchesOfWarding);
-            ForceNonExceptional(index);
-            #endregion
-            #endregion
 
             AddCraft(typeof(Bascinet), 1011079, 1025132, 8.3, 58.3, typeof(IronIngot), 1044036, 15, 1044037);
             AddCraft(typeof(CloseHelm), 1011079, 1025128, 37.9, 87.9, typeof(IronIngot), 1044036, 15, 1044037);

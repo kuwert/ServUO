@@ -582,32 +582,18 @@ namespace Server.Items
 
         public static Type[][] _SpecialSupplyLoot = new Type[][]
             {
-                new Type[] { typeof(LegendaryMapmakersGlasses), typeof(ManaPhasingOrb), typeof(RunedSashOfWarding), typeof(ShieldEngravingTool), null },
-                new Type[] { typeof(ForgedPardon), typeof(LegendaryMapmakersGlasses), typeof(ManaPhasingOrb), typeof(RunedSashOfWarding), typeof(Skeletonkey), typeof(MasterSkeletonKey), typeof(SurgeShield) },
-                new Type[] { typeof(LegendaryMapmakersGlasses), typeof(ManaPhasingOrb), typeof(RunedSashOfWarding) },
-                new Type[] { typeof(LegendaryMapmakersGlasses), typeof(ManaPhasingOrb), typeof(RunedSashOfWarding), typeof(TastyTreat) },
-                new Type[] { typeof(LegendaryMapmakersGlasses), typeof(ManaPhasingOrb), typeof(RunedSashOfWarding) },
             };
 
         public static Type[] _SpecialCacheHordeAndTrove = new Type[]
             {
-                typeof(OctopusNecklace), typeof(SkullGnarledStaff), typeof(SkullLongsword)
             };
 
         public static Type[] _DecorativeMinorArtifacts = new Type[]
             {
-                typeof(CandelabraOfSouls), typeof(GoldBricks), typeof(PhillipsWoodenSteed), typeof(AncientShipModelOfTheHMSCape), typeof(AdmiralsHeartyRum)
             };
 
         public static Type[] _FunctionalMinorArtifacts = new Type[]
             {
-                typeof(ArcticDeathDealer), typeof(BlazeOfDeath), typeof(BurglarsBandana),
-                typeof(CavortingClub), typeof(DreadPirateHat),
-                typeof(EnchantedTitanLegBone), typeof(GwennosHarp), typeof(IolosLute),
-                typeof(LunaLance), typeof(NightsKiss), typeof(NoxRangersHeavyCrossbow),
-                typeof(PolarBearMask), typeof(VioletCourage), typeof(HeartOfTheLion),
-                typeof(ColdBlood), typeof(AlchemistsBauble), typeof(CaptainQuacklebushsCutlass),
-                typeof(ShieldOfInvulnerability),
             };
 
         public static SkillName[][] _TranscendenceTable = new SkillName[][]

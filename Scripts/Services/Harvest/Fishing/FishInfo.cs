@@ -445,9 +445,6 @@ namespace Server.Items
         public static Type[] SOSArtifacts => m_SOSArtifacts;
         private static readonly Type[] m_SOSArtifacts = new Type[]
         {
-            typeof(AntiqueWeddingDress), typeof(GrapeVine),
-            typeof(KelpWovenLeggings),   typeof(LargeFishingNet),
-            typeof(RunedDriftwoodBow),   typeof(ValkyrieArmor)
         };
 
     }

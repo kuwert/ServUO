@@ -11,12 +11,8 @@ namespace Server.Misc
         public static bool Enabled => SeasonalEventSystem.IsActive(EventType.VirtueArtifacts);
 
         private static readonly Type[] m_VirtueArtifacts = new Type[]
-            {
-                typeof( KatrinasCrook ), typeof( JaanasStaff ), typeof( DragonsEnd ), typeof( AnkhPendant ),
-                typeof( SentinelsGuard ), typeof( LordBlackthornsExemplar ), typeof( MapOfTheKnownWorld ), typeof( TenthAnniversarySculpture ),
-                typeof( CompassionArms ), typeof( JusticeBreastplate ), typeof( ValorGauntlets ), typeof( HonestyGorget ),
-                typeof( SpiritualityHelm ), typeof( HonorLegs ), typeof( SacrificeSollerets )
-            };
+        {
+        };
 
         public static Type[] Artifacts => m_VirtueArtifacts;
 

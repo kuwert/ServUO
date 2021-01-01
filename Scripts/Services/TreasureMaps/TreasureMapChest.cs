@@ -14,50 +14,31 @@ namespace Server.Items
         public static Type[] Artifacts => m_Artifacts;
         private static readonly Type[] m_Artifacts = new Type[]
         {
-            typeof(CandelabraOfSouls), typeof(GoldBricks), typeof(PhillipsWoodenSteed),
-            typeof(ArcticDeathDealer), typeof(BlazeOfDeath), typeof(BurglarsBandana),
-            typeof(CavortingClub), typeof(DreadPirateHat),
-            typeof(EnchantedTitanLegBone), typeof(GwennosHarp), typeof(IolosLute),
-            typeof(LunaLance), typeof(NightsKiss), typeof(NoxRangersHeavyCrossbow),
-            typeof(PolarBearMask), typeof(VioletCourage), typeof(HeartOfTheLion),
-            typeof(ColdBlood), typeof(AlchemistsBauble), typeof(CaptainQuacklebushsCutlass),
-            typeof(ShieldOfInvulnerability), typeof(AncientShipModelOfTheHMSCape),
-            typeof(AdmiralsHeartyRum)
         };
 
         public static Type[] ArtifactsLevelFiveToSeven => m_LevelFiveToSeven;
         private static readonly Type[] m_LevelFiveToSeven = new Type[]
         {
-            typeof(ForgedPardon), typeof(ManaPhasingOrb), typeof(RunedSashOfWarding), typeof(SurgeShield)
         };
 
         public static Type[] ArtifactsLevelSeven => m_LevelSevenOnly;
         private static readonly Type[] m_LevelSevenOnly = new Type[]
         {
-            typeof(CoffinPiece), typeof(MasterSkeletonKey)
         };
 
         public static Type[] SOSArtifacts => m_SOSArtifacts;
         private static readonly Type[] m_SOSArtifacts = new Type[]
         {
-            typeof(AntiqueWeddingDress),
-            typeof(KelpWovenLeggings),
-            typeof(RunedDriftwoodBow),
-            typeof(ValkyrieArmor)
         };
+
         public static Type[] SOSDecor => m_SOSDecor;
         private static readonly Type[] m_SOSDecor = new Type[]
         {
-            typeof(GrapeVine),
-            typeof(LargeFishingNet)
         };
 
         public static Type[] ImbuingIngreds => m_ImbuingIngreds;
         private static readonly Type[] m_ImbuingIngreds =
         {
-            typeof(AbyssalCloth),   typeof(EssencePrecision), typeof(EssenceAchievement), typeof(EssenceBalance),
-            typeof(EssenceControl), typeof(EssenceDiligence), typeof(EssenceDirection),   typeof(EssenceFeeling),
-            typeof(EssenceOrder),   typeof(EssencePassion),   typeof(EssencePersistence), typeof(EssenceSingularity)
         };
 
         private static readonly TimeSpan _DeleteTime = TimeSpan.FromHours(3);
