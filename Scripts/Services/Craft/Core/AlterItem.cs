@@ -361,8 +361,7 @@ namespace Server.Engines.Craft
 
         private static readonly Type[] ArmorType =
         {
-            typeof(RingmailGloves),    typeof(RingmailGlovesOfMining),
-            typeof(PlateGloves),   typeof(LeatherGloves)
+            typeof(RingmailGloves), typeof(PlateGloves), typeof(LeatherGloves)
         };
 
         private static bool IsAlterable(Item item)

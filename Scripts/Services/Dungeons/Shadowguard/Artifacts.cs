@@ -218,7 +218,6 @@ namespace Server.Items
         }
     }
 
-    [Alterable(typeof(DefBlacksmithy), typeof(GrugorsShieldGargoyle))]
     public class GrugorsShield : WoodenShield
     {
         public override int LabelNumber => 1156129;
@@ -247,50 +246,6 @@ namespace Server.Items
         }
 
         public GrugorsShield(Serial serial) : base(serial)
-        {
-        }
-
-        public override void Serialize(GenericWriter writer)
-        {
-            base.Serialize(writer);
-            writer.Write(0);
-        }
-
-        public override void Deserialize(GenericReader reader)
-        {
-            base.Deserialize(reader);
-            int version = reader.ReadInt();
-        }
-    }
-
-    public class GrugorsShieldGargoyle : GargishWoodenShield
-    {
-        public override int LabelNumber => 1156129;
-
-        public override bool IsArtifact => true;
-
-        public override int InitMinHits => 255;
-        public override int InitMaxHits => 255;
-
-        [Constructable]
-        public GrugorsShieldGargoyle()
-        {
-            SkillBonuses.SetValues(0, SkillName.Parry, 10.0);
-            Attributes.BonusStr = 10;
-            Attributes.BonusStam = 10;
-            Attributes.RegenHits = 5;
-            Attributes.WeaponSpeed = 10;
-
-            SetProtection(typeof(BaseEodonTribesman), new TextDefinition(1156291), 60);
-
-            PhysicalBonus = 4;
-            FireBonus = 4;
-            ColdBonus = 4;
-            PoisonBonus = 4;
-            EnergyBonus = 3;
-        }
-
-        public GrugorsShieldGargoyle(Serial serial) : base(serial)
         {
         }
 

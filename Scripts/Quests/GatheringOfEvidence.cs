@@ -12,9 +12,6 @@ namespace Server.Engines.Quests
             AddObjective(new ObtainObjective(typeof(VoidCrystalOfCorruptedArcaneEssence), "Void Crystal of Corrupted Arcane Essence", 1));
             AddObjective(new ObtainObjective(typeof(VoidCrystalOfCorruptedSpiritualEssence), "Void Crystal of Corrupted Spiritual Essence", 1));
             AddObjective(new ObtainObjective(typeof(VoidCrystalOfCorruptedMysticalEssence), "Void Crystal of Corrupted Mystical Essence", 1));
-
-            AddReward(new BaseReward(typeof(ResonantShieldOfVengeance), "Resonant Shield of Vengeance"));
-            AddReward(new BaseReward(typeof(WindOfCorruption), "Wind of Corruption"));
         }
 
         public override object Title => 1150316; // Gathering of Evidence (Gargoyle Rewards)
@@ -63,7 +60,6 @@ namespace Server.Engines.Quests
             AddObjective(new ObtainObjective(typeof(VoidCrystalOfCorruptedSpiritualEssence), "Void Crystal of Corrupted Spiritual Essence", 1));
             AddObjective(new ObtainObjective(typeof(VoidCrystalOfCorruptedMysticalEssence), "Void Crystal of Corrupted Mystical Essence", 1));
 
-            AddReward(new BaseReward(typeof(ResonantShieldOfVengeanceHuman), "Resonant Shield of Vengeance"));
             AddReward(new BaseReward(typeof(WindOfCorruptionHuman), "Wind of Corruption"));
         }
 

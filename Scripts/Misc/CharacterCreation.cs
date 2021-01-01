@@ -1243,10 +1243,7 @@ namespace Server.Misc
                     }
                 case SkillName.Parry:
                     {
-                        if (human || elf)
-                            EquipItem(new WoodenShield());
-                        else if (gargoyle)
-                            EquipItem(new GargishWoodenShield());
+                        EquipItem(new WoodenShield());
 
                         break;
                     }

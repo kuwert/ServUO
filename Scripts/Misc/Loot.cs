@@ -10,36 +10,31 @@ namespace Server
         #region List definitions
 
         #region SA equipment
-		private static readonly Type[] m_SAJewelryTypes = new[]
+		private static readonly Type[] m_SAJewelryTypes = new Type[]
         {
-            typeof(GargishRing), typeof(GargishBracelet)
         };
+
         public static Type[] SAJewelryTypes => m_SAJewelryTypes;
 		
-		public static readonly Type[] m_SAShieldTypes = new[] 
+		public static readonly Type[] m_SAShieldTypes = new Type[]
 		{
-            typeof(GargishChaosShield), typeof(GargishKiteShield), typeof(GargishOrderShield), typeof(GargishWoodenShield),
-            typeof(LargeStoneShield)
         };
+
         public static Type[] SAShieldTypes => m_SAShieldTypes;
 		
-        private static readonly Type[] m_SAWeaponTypes = new[]
+        private static readonly Type[] m_SAWeaponTypes = new Type[]
         {
-            typeof(DiscMace), typeof(GargishTalwar), typeof(Shortblade), typeof(DualPointedSpear), typeof(GlassStaff),
-            typeof(StoneWarSword), typeof(DualShortAxes), typeof(GlassSword), typeof(GargishDagger)
         };
+
         public static Type[] SAWeaponTypes => m_SAWeaponTypes;
 
         private static readonly Type[] m_SARangedWeaponTypes = new[] { typeof(Boomerang), typeof(Cyclone), typeof(SoulGlaive), };
         public static Type[] SARangedWeaponTypes => m_SARangedWeaponTypes;
 
-        private static readonly Type[] m_SAArmorTypes = new[]
+        private static readonly Type[] m_SAArmorTypes = new Type[]
         {
-            typeof(GargishLeatherChest), typeof(GargishLeatherLegs), typeof(GargishLeatherArms), typeof(GargishLeatherKilt),
-            typeof(GargishStoneChest), typeof(GargishStoneLegs), typeof(GargishStoneArms),
-            typeof(GargishStoneKilt), typeof(GargishPlateChest), typeof(GargishPlateLegs), typeof(GargishPlateArms),
-            typeof(GargishPlateKilt), typeof(GargishNecklace), typeof( GargishEarrings )
         };
+
         public static Type[] SAArmorTypes => m_SAArmorTypes;
 
         private static readonly Type[] m_SAClothingTypes = new[]

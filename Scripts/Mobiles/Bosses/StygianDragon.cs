@@ -59,15 +59,11 @@ namespace Server.Mobiles
         {
         }
 
-        public override Type[] UniqueSAList => new[]
+        public override Type[] UniqueSAList => new Type[]
                 {
-                    typeof(BurningAmber), typeof(DraconisWrath), typeof(DragonHideShield), typeof(FallenMysticsSpellbook),
-                    typeof(LifeSyphon), typeof(GargishSignOfOrder), typeof(HumanSignOfOrder), typeof(VampiricEssence)
                 };
-        public override Type[] SharedSAList => new[]
+        public override Type[] SharedSAList => new Type[]
                 {
-                    typeof(AxesOfFury), typeof(SummonersKilt), typeof(GiantSteps),
-                    typeof(TokenOfHolyFavor)
                 };
 
         public override bool AlwaysMurderer => true;

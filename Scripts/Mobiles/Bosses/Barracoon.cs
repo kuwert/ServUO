@@ -61,13 +61,7 @@ namespace Server.Mobiles
 
         public override ChampionSkullType SkullType => ChampionSkullType.Greed;
         public override Type[] UniqueList => new[] { typeof(FangOfRactus) };
-        public override Type[] SharedList => new[]
-                {
-                    typeof(EmbroideredOakLeafCloak),
-                    typeof(DjinnisRing),
-                    typeof(DetectiveBoots),
-                    typeof(GauntletsOfAnger)
-                };
+        public override Type[] SharedList => new Type[] { };
         public override Type[] DecorativeList => new[] { typeof(SwampTile), typeof(MonsterStatuette) };
         public override MonsterStatuetteType[] StatueTypes => new[] { MonsterStatuetteType.Slime };
         public override bool AlwaysMurderer => true;
@@ -242,7 +236,7 @@ namespace Server.Mobiles
         {
             private readonly Mobile m_Owner;
             public ExpirePolymorphTimer(Mobile owner)
-                : base(TimeSpan.FromMinutes(3.0)) 
+                : base(TimeSpan.FromMinutes(3.0))
             {
                 m_Owner = owner;
 

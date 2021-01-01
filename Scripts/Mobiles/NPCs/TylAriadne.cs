@@ -43,8 +43,6 @@ namespace Server.Engines.Quests
 
             // 1077705 You feel as light as a butterfly, as if you could block incoming blows easily. Your ability to hone your Parrying skill is enhanced in this area. 
             // 1077706 Your inner butterfly is tired. You're not particularly able to block incoming blows well. Your Parrying learning potential is no longer enhanced.
-
-            AddReward(new BaseReward(typeof(EscutcheonDeAriadne), 1077694));
         }
 
         public override bool CanOffer()

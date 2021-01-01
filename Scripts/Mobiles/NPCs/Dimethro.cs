@@ -40,8 +40,6 @@ namespace Server.Engines.Quests
 
             // 1077492 Your Wrestling potential is greatly enhanced while questing in this area.
             // 1077586 You are not in the quest area for Apprentice Wrestler. Your Wrestling potential is not enhanced here.
-
-            AddReward(new BaseReward(typeof(GlovesOfSafeguarding), 1077614));
         }
 
         public override bool CanOffer()

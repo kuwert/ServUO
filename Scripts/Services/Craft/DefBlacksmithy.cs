@@ -327,62 +327,20 @@ namespace Server.Engines.Craft
             #endregion
             #endregion
 
-            #region Helmets
             AddCraft(typeof(Bascinet), 1011079, 1025132, 8.3, 58.3, typeof(IronIngot), 1044036, 15, 1044037);
             AddCraft(typeof(CloseHelm), 1011079, 1025128, 37.9, 87.9, typeof(IronIngot), 1044036, 15, 1044037);
             AddCraft(typeof(Helmet), 1011079, 1025130, 37.9, 87.9, typeof(IronIngot), 1044036, 15, 1044037);
             AddCraft(typeof(NorseHelm), 1011079, 1025134, 37.9, 87.9, typeof(IronIngot), 1044036, 15, 1044037);
             AddCraft(typeof(PlateHelm), 1011079, 1025138, 62.6, 112.6, typeof(IronIngot), 1044036, 15, 1044037);
 
-            index = AddCraft(typeof(ChainHatsuburi), 1011079, 1030175, 30.0, 80.0, typeof(IronIngot), 1044036, 20, 1044037);
-
-            index = AddCraft(typeof(PlateHatsuburi), 1011079, 1030176, 45.0, 95.0, typeof(IronIngot), 1044036, 20, 1044037);
-
-            index = AddCraft(typeof(HeavyPlateJingasa), 1011079, 1030178, 45.0, 95.0, typeof(IronIngot), 1044036, 20, 1044037);
-
-            index = AddCraft(typeof(LightPlateJingasa), 1011079, 1030188, 45.0, 95.0, typeof(IronIngot), 1044036, 20, 1044037);
-
-            index = AddCraft(typeof(SmallPlateJingasa), 1011079, 1030191, 45.0, 95.0, typeof(IronIngot), 1044036, 20, 1044037);
-
-            index = AddCraft(typeof(DecorativePlateKabuto), 1011079, 1030179, 90.0, 140.0, typeof(IronIngot), 1044036, 25, 1044037);
-
-            index = AddCraft(typeof(PlateBattleKabuto), 1011079, 1030192, 90.0, 140.0, typeof(IronIngot), 1044036, 25, 1044037);
-
-            index = AddCraft(typeof(StandardPlateKabuto), 1011079, 1030196, 90.0, 140.0, typeof(IronIngot), 1044036, 25, 1044037);
-
-            index = AddCraft(typeof(Circlet), 1011079, 1032645, 62.1, 112.1, typeof(IronIngot), 1044036, 6, 1044037);
-
-            index = AddCraft(typeof(RoyalCirclet), 1011079, 1032646, 70.0, 120.0, typeof(IronIngot), 1044036, 6, 1044037);
-
-            index = AddCraft(typeof(GemmedCirclet), 1011079, 1032647, 75.0, 125.0, typeof(IronIngot), 1044036, 6, 1044037);
-            AddRes(index, typeof(Tourmaline), 1044237, 1, 1044240);
-            AddRes(index, typeof(Amethyst), 1044236, 1, 1044240);
-            AddRes(index, typeof(BlueDiamond), 1032696, 1, 1044240);
-            #endregion
-
-            #region Shields
             AddCraft(typeof(Buckler), 1011080, 1027027, -25.0, 25.0, typeof(IronIngot), 1044036, 10, 1044037);
             AddCraft(typeof(BronzeShield), 1011080, 1027026, -15.2, 34.8, typeof(IronIngot), 1044036, 12, 1044037);
             AddCraft(typeof(HeaterShield), 1011080, 1027030, 24.3, 74.3, typeof(IronIngot), 1044036, 18, 1044037);
             AddCraft(typeof(MetalShield), 1011080, 1027035, -10.2, 39.8, typeof(IronIngot), 1044036, 14, 1044037);
             AddCraft(typeof(MetalKiteShield), 1011080, 1027028, 4.6, 54.6, typeof(IronIngot), 1044036, 16, 1044037);
             AddCraft(typeof(WoodenKiteShield), 1011080, 1027032, -15.2, 34.8, typeof(IronIngot), 1044036, 8, 1044037);
-
             AddCraft(typeof(ChaosShield), 1011080, 1027107, 85.0, 135.0, typeof(IronIngot), 1044036, 25, 1044037);
             AddCraft(typeof(OrderShield), 1011080, 1027108, 85.0, 135.0, typeof(IronIngot), 1044036, 25, 1044037);
-
-            index = AddCraft(typeof(SmallPlateShield), 1011080, 1095770, -25.0, 25.0, typeof(IronIngot), 1044036, 12, 1044037);
-
-            index = AddCraft(typeof(GargishKiteShield), 1011080, 1095774, 4.6, 54.6, typeof(IronIngot), 1044036, 16, 1044037);
-
-            index = AddCraft(typeof(LargePlateShield), 1011080, 1095772, 24.3, 74.3, typeof(IronIngot), 1044036, 18, 1044037);
-
-            index = AddCraft(typeof(MediumPlateShield), 1011080, 1095771, -10.2, 39.8, typeof(IronIngot), 1044036, 14, 1044037);
-
-            index = AddCraft(typeof(GargishChaosShield), 1011080, 1095808, 85.0, 135.0, typeof(IronIngot), 1044036, 25, 1044037);
-
-            index = AddCraft(typeof(GargishOrderShield), 1011080, 1095810, 85.0, 135.0, typeof(IronIngot), 1044036, 25, 1044037);
-            #endregion
 
             #region Bladed
             AddCraft(typeof(BoneHarvester), 1011081, 1029915, 33.0, 83.0, typeof(IronIngot), 1044036, 10, 1044037);
@@ -743,46 +701,6 @@ namespace Server.Engines.Craft
 
             #endregion
 
-            #region Miscellaneous
-
-            index = AddCraft(typeof(DragonGloves), 1011173, 1029795, 68.9, 118.9, typeof(RedScales), 1060883, 16, 1060884);
-            SetUseSubRes2(index, true);
-
-            index = AddCraft(typeof(DragonHelm), 1011173, 1029797, 72.6, 122.6, typeof(RedScales), 1060883, 20, 1060884);
-            SetUseSubRes2(index, true);
-
-            index = AddCraft(typeof(DragonLegs), 1011173, 1029799, 78.8, 128.8, typeof(RedScales), 1060883, 28, 1060884);
-            SetUseSubRes2(index, true);
-
-            index = AddCraft(typeof(DragonArms), 1011173, 1029815, 76.3, 126.3, typeof(RedScales), 1060883, 24, 1060884);
-            SetUseSubRes2(index, true);
-
-            index = AddCraft(typeof(DragonChest), 1011173, 1029793, 85.0, 135.0, typeof(RedScales), 1060883, 36, 1060884);
-            SetUseSubRes2(index, true);
-
-            index = AddCraft(typeof(CrushedGlass), 1011173, 1113351, 110.0, 135.0, typeof(BlueDiamond), 1032696, 1, 1044253);
-            AddRes(index, typeof(GlassSword), 1095371, 5, 1044253);
-
-            index = AddCraft(typeof(PowderedIron), 1011173, 1113353, 110.0, 135.0, typeof(WhitePearl), 1026253, 1, 1044253);
-            AddRes(index, typeof(IronIngot), 1044036, 20, 1044037);
-
-            AddCraft(typeof(MetalKeg), 1011173, 1150675, 85.0, 100.0, typeof(IronIngot), 1044036, 25, 1044253);
-
-            index = AddCraft(typeof(ExodusSacrificalDagger), 1011173, 1153500, 95.0, 120.0, typeof(IronIngot), 1044036, 12, 1044253);
-            AddRes(index, typeof(BlueDiamond), 1032696, 2, 1044253);
-            AddRes(index, typeof(FireRuby), 1032695, 2, 1044253);
-            AddRes(index, typeof(SmallPieceofBlackrock), 1150016, 10, 1044253);
-            ForceNonExceptional(index);
-
-            index = AddCraft(typeof(GlovesOfFeudalGrip), 1011173, 1157349, 120.0, 120.1, typeof(RedScales), 1060883, 18, 1060884);
-            SetUseSubRes2(index, true);
-            AddRes(index, typeof(BlueDiamond), 1032696, 4, 1044253);
-            AddRes(index, typeof(GauntletsOfNobility), 1061092, 1, 1053098);
-            AddRes(index, typeof(BloodOfTheDarkFather), 1157343, 5, 1053098);
-            AddRecipe(index, (int)SmithRecipes.GlovesOfFeudalGrip);
-            ForceNonExceptional(index);
-
-            #endregion
 
             // Set the overridable material
             SetSubRes(typeof(IronIngot), 1044022);

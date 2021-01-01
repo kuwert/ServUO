@@ -75,7 +75,7 @@ namespace Server.Engines.Craft
 
         private static readonly Type[] m_TailorClothNonColorables = new Type[]
         {
-            typeof(DeerMask), typeof(BearMask), typeof(OrcMask), typeof(TribalMask), typeof(HornedTribalMask), typeof(CuffsOfTheArchmage)
+            typeof(DeerMask), typeof(BearMask), typeof(OrcMask), typeof(TribalMask), typeof(HornedTribalMask)
         };
 
         // singleton instance
@@ -685,12 +685,6 @@ namespace Server.Engines.Craft
             index = AddCraft(typeof(OrcHelm), 1049149, 1027947, 90.0, 115.0, typeof(Leather), 1044462, 6, 1044463);
             AddRes(index, typeof(Bone), 1049064, 4, 1049063);
 
-            index = AddCraft(typeof(CuffsOfTheArchmage), 1049149, 1157348, 120.0, 120.1, typeof(Cloth), 1044455, 8, 1044287);
-            AddRes(index, typeof(MidnightBracers), 1061093, 1, 1044253);
-            AddRes(index, typeof(BloodOfTheDarkFather), 1157343, 5, 1044253);
-            AddRes(index, typeof(DarkSapphire), 1032690, 4, 1044253);
-            ForceNonExceptional(index);
-            AddRecipe(index, (int)TailorRecipe.CuffsOfTheArchmage);
             #endregion
 
             // Set the overridable material
