@@ -154,8 +154,6 @@ namespace Server.Engines.Quests
         {
             AddObjective(new ObtainObjective(typeof(SearedFireAntGoo), "Seared Fire Ant Goo", 5, 0x0976));
             AddObjective(new ObtainObjective(typeof(PileofInspectedAgapiteIngots), "Pile of Inspected Agapite Ingots", 1, 0x1BEA));
-
-            AddReward(new BaseReward(typeof(ElixirofAgapiteConversion), "Elixir of Agapite Conversion"));
         }
 
         public TierQuestInfo TierInfo => TierQuestInfo.Thepem;
