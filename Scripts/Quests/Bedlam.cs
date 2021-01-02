@@ -104,8 +104,6 @@ namespace Server.Engines.Quests
         public FoolingAernyaQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(SignedTuitionReimbursementForm), "signed tuition reimbursement form", 1, typeof(Aernya), "Aernya (Umbra)"));
-
             AddReward(new BaseReward(1074634)); // Tuition Reimbursement
         }
 
@@ -244,8 +242,6 @@ namespace Server.Engines.Quests
         public TuitionReimbursementQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(CompletedTuitionReimbursementForm), "completed tuition reimbursement form", 1, typeof(Aernya), "Aernya (Umbra)"));
-
             AddReward(new BaseReward(typeof(RewardBox), 1072584));
         }
 
