@@ -8,8 +8,6 @@ namespace Server.Engines.Quests
         public BrotherlyLoveQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(PersonalLetterAhie), "letter", 1, typeof(Ahie), "Ahie (The Heartwood)", 1800));
-
             AddReward(new BaseReward(typeof(TrinketBag), 1072341));
         }
 

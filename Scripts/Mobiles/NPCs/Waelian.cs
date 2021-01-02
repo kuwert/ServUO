@@ -24,8 +24,7 @@ namespace Server.Engines.Quests
                     typeof(StopHarpingOnMeQuest),
                     typeof(TheFarEyeQuest),
                     typeof(NecessitysMotherQuest),
-                    typeof(TickTockQuest),
-                    typeof(FromTheGaultierCollectionQuest)
+                    typeof(TickTockQuest)
                 };
         public override void InitBody()
         {

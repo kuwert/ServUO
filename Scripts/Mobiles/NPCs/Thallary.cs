@@ -65,10 +65,7 @@ namespace Server.Engines.Quests
 
         public override Type[] Quests => new Type[]
                 {
-                    typeof(ScaleArmorQuest),
-                    typeof(ThePuffyShirtQuest),
-                    typeof(FromTheGaultierCollectionQuest),
-                    typeof(HuteCoutureQuest)
+                    typeof(ScaleArmorQuest)
                 };
         public override void InitBody()
         {
