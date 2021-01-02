@@ -40,8 +40,6 @@ namespace Server.Engines.Quests
 
             // 1078215 You feel you can track creatures here with ease. Your Tracking skill is enhanced in this area.
             // 1078216 You feel it is more difficult to track creatures here. Your Tracking skill is no longer enhanced.
-
-            AddReward(new BaseReward(typeof(WalkersLeggings), 1078222));
         }
 
         public override bool CanOffer()

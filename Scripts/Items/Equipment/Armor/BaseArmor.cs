@@ -2243,9 +2243,6 @@ namespace Server.Items
                 list.Add(1111709); // Gargoyles Only
             }
 
-            if (this is SurgeShield && ((SurgeShield)this).Surge > SurgeType.None)
-                list.Add(1116176 + ((int)((SurgeShield)this).Surge));
-
             m_NegativeAttributes.GetProperties(list, this);
             m_AosSkillBonuses.GetProperties(list);
 
@@ -2391,9 +2388,6 @@ namespace Server.Items
 
             if ((prop = m_AosAttributes.ReflectPhysical) != 0)
                 list.Add(1060442, prop.ToString()); // reflect physical damage ~1_val~%
-
-            if (this is SurgeShield && ((SurgeShield)this).Surge > SurgeType.None)
-                list.Add(1153098, ((SurgeShield)this).Charges.ToString());
 
             if ((prop = m_AosAttributes.AttackChance) != 0)
                 list.Add(1060415, prop.ToString()); // hit chance increase ~1_val~%

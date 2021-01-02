@@ -268,8 +268,6 @@ namespace Server
 
             BestialSetHelper.OnDamage(m, from, ref totalDamage);
 
-            EpiphanyHelper.OnHit(m, totalDamage);
-
             if (type == DamageType.Spell && m != null && Feint.Registry.ContainsKey(m) && Feint.Registry[m].Enemy == from)
                 totalDamage -= (int)(damage * ((double)Feint.Registry[m].DamageReduction / 100));
 
@@ -768,9 +766,6 @@ namespace Server
                 if (m is PlayerMobile && BaseFishPie.IsUnderEffects(m, FishPieEffect.HitsRegen))
                     value += 3;
 
-                if (SurgeShield.IsUnderEffects(m, SurgeType.Hits))
-                    value += 10;
-
                 if (SearingWeaponContext.HasContext(m))
                     value -= m is PlayerMobile ? 20 : 60;
 
@@ -782,9 +777,6 @@ namespace Server
                 if (m is PlayerMobile && BaseFishPie.IsUnderEffects(m, FishPieEffect.StamRegen))
                     value += 3;
 
-                if (SurgeShield.IsUnderEffects(m, SurgeType.Stam))
-                    value += 10;
-
                 //Virtue Artifacts
                 value += AnkhPendant.GetStamRegenModifier(m);
             }
@@ -795,9 +787,6 @@ namespace Server
 
                 if (m is PlayerMobile && BaseFishPie.IsUnderEffects(m, FishPieEffect.ManaRegen))
                     value += 3;
-
-                if (SurgeShield.IsUnderEffects(m, SurgeType.Mana))
-                    value += 10;
 
                 //Virtue Artifacts
                 value += AnkhPendant.GetManaRegenModifier(m);

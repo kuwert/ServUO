@@ -71,13 +71,8 @@ namespace Server.Mobiles
         }
 
         public override ChampionSkullType SkullType => ChampionSkullType.Death;
-        public override Type[] UniqueList => new[] { typeof(ShroudOfDeceit) };
-        public override Type[] SharedList => new[]
-                {
-                    typeof(ANecromancerShroud),
-                    typeof(CaptainJohnsHat),
-                    typeof(DetectiveBoots)
-                };
+        public override Type[] UniqueList => new Type[] { };
+        public override Type[] SharedList => new Type[] { };
         public override Type[] DecorativeList => new[] { typeof(WallBlood), typeof(TatteredAncientMummyWrapping) };
         public override MonsterStatuetteType[] StatueTypes => new MonsterStatuetteType[] { };
         public override bool AlwaysMurderer => true;

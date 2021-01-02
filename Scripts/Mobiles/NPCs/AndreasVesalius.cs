@@ -44,8 +44,6 @@ namespace Server.Engines.Quests
 
             // 1077686 You feel very willing to learn more about the body. Your ability to hone your Anatomy skill is enhanced in this area.
             // 1077687 You lose your ambition to learn about the body. Your Anatomy skill learning potential is no longer enhanced.
-
-            AddReward(new BaseReward(typeof(TunicOfGuarding), 1077693));
         }
 
         public override bool CanOffer()

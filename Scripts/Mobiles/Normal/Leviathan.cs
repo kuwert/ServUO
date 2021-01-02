@@ -8,31 +8,6 @@ namespace Server.Mobiles
     {
         private static readonly Type[] m_Artifacts = new Type[]
         {
-            // Decorations
-            typeof(CandelabraOfSouls),
-            typeof(GhostShipAnchor),
-            typeof(GoldBricks),
-            typeof(PhillipsWoodenSteed),
-            typeof(SeahorseStatuette),
-            typeof(ShipModelOfTheHMSCape),
-            typeof(AdmiralsHeartyRum),
-
-            // Equipment
-            typeof(AlchemistsBauble),
-            typeof(ArcticDeathDealer),
-            typeof(BlazeOfDeath),
-            typeof(BurglarsBandana),
-            typeof(CaptainQuacklebushsCutlass),
-            typeof(CavortingClub),
-            typeof(DreadPirateHat),
-            typeof(EnchantedTitanLegBone),
-            typeof(GwennosHarp),
-            typeof(IolosLute),
-            typeof(LunaLance),
-            typeof(NightsKiss),
-            typeof(NoxRangersHeavyCrossbow),
-            typeof(PolarBearMask),
-            typeof(VioletCourage)
         };
 
         private Mobile m_Fisher;

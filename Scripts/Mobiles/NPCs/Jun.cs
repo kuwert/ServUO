@@ -40,8 +40,6 @@ namespace Server.Engines.Quests
 
             // 1078176 You feel you can easily slip into the shadows and walk silently here. Your ability to Stealth is enhanced in this area.
             // 1078177 You feel it is more difficult to Stealth here. Your ability to Stealth is no longer enhanced.
-
-            AddReward(new BaseReward(typeof(TwilightJacket), 1078183));
         }
 
         public override bool CanOffer()

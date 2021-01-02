@@ -5434,7 +5434,6 @@ namespace Server.Mobiles
 
         public override void OnKarmaChange(int oldValue)
         {
-            EpiphanyHelper.OnKarmaChange(this);
         }
 
         public override void OnSkillChange(SkillName skill, double oldBase)

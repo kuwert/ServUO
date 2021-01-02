@@ -433,9 +433,7 @@ namespace Server.Engines.Harvest
 
                                     double ran = Utility.RandomDouble();
 
-                                    if (ran < 0.05)
-                                        preLoot = new YellowPolkaDotBikini();
-                                    else if (ran < 0.25)
+                                    if (ran < 0.25)
                                         preLoot = new ShipwreckedItem(list[Utility.RandomMinMax(3, 7)], dredge);
                                     else
                                         preLoot = new ShipwreckedItem(list[Utility.Random(3)], dredge);
