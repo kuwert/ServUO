@@ -66,12 +66,10 @@ namespace Server.Engines.Quests
                     typeof(BullfightingSortOfQuest),
                     typeof(ForcedMigrationQuest),
                     typeof(FineFeastQuest),
-                    typeof(OverpopulationQuest),
                     typeof(HeroInTheMakingQuest),
                     typeof(ThinningTheHerdQuest),
                     typeof(TheyllEatAnythingQuest),
                     typeof(NoGoodFishStealingQuest),
-                    typeof(WildBoarCullQuest),
                     typeof(TheyreBreedingLikeRabbitsQuest),
                     typeof(GuileIrkAndSpiteQuest)
                 };

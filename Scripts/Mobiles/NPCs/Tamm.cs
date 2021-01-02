@@ -25,11 +25,9 @@ namespace Server.Engines.Quests
                     typeof(TheyllEatAnythingQuest),
                     typeof(NoGoodFishStealingQuest),
                     typeof(HeroInTheMakingQuest),
-                    typeof(WildBoarCullQuest),
                     typeof(ForcedMigrationQuest),
                     typeof(BullfightingSortOfQuest),
                     typeof(FineFeastQuest),
-                    typeof(OverpopulationQuest),
                     typeof(DeadManWalkingQuest),
                     typeof(ForkedTonguesQuest),
                     typeof(TrollingForTrollsQuest)
