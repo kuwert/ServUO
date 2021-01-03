@@ -369,45 +369,8 @@ namespace Server.Engines.Craft
             AddCraft(typeof(QuarterStaff), 1044566, 1023721, 73.6, 98.6, typeof(Board), 1044041, 6, 1044351);
             AddCraft(typeof(GnarledStaff), 1044566, 1025112, 78.9, 103.9, typeof(Board), 1044041, 7, 1044351);
 
-            AddCraft(typeof(Bokuto), 1044566, 1030227, 70.0, 95.0, typeof(Board), 1044041, 6, 1044351);
-            AddCraft(typeof(Fukiya), 1044566, 1030229, 60.0, 85.0, typeof(Board), 1044041, 6, 1044351);
-            AddCraft(typeof(Tetsubo), 1044566, 1030225, 80.0, 105.0, typeof(Board), 1044041, 10, 1044351);
-
-            AddCraft(typeof(WildStaff), 1044566, 1031557, 63.8, 113.8, typeof(Board), 1044041, 16, 1044351);
-
-            index = AddCraft(typeof(PhantomStaff), 1044566, 1072919, 90.0, 130.0, typeof(Board), 1044041, 16, 1044351);
-            AddRes(index, typeof(DiseasedBark), 1032683, 1, 1053098);
-            AddRes(index, typeof(Putrefaction), 1032678, 10, 1053098);
-            AddRes(index, typeof(Taint), 1032679, 10, 1053098);
-            AddRecipe(index, (int)CarpRecipes.PhantomStaff);
-            ForceNonExceptional(index);
-
-            index = AddCraft(typeof(ArcanistsWildStaff), 1044566, 1073549, 63.8, 113.8, typeof(Board), 1044041, 16, 1044351);
-            AddRes(index, typeof(WhitePearl), 1026253, 1, 1053098);
-            AddRecipe(index, (int)CarpRecipes.ArcanistsWildStaff);
-
-            index = AddCraft(typeof(ThornedWildStaff), 1044566, 1073551, 63.8, 113.8, typeof(Board), 1044041, 16, 1044351);
-            AddRes(index, typeof(FireRuby), 1026254, 1, 1053098);
-            AddRecipe(index, (int)CarpRecipes.ThornedWildStaff);
-
-            index = AddCraft(typeof(HardenedWildStaff), 1044566, 1073552, 63.8, 113.8, typeof(Board), 1044041, 16, 1044351);
-            AddRes(index, typeof(Turquoise), 1026250, 1, 1053098);
-            AddRecipe(index, (int)CarpRecipes.HardenedWildStaff);
-
-            index = AddCraft(typeof(SerpentStoneStaff), 1044566, 1095367, 63.8, 113.8, typeof(Board), 1044041, 16, 1044351);
-            AddRes(index, typeof(EcruCitrine), 1026252, 1, 1053098);
-
-            index = AddCraft(typeof(GargishGnarledStaff), 1044566, 1097488, 78.9, 128.9, typeof(Board), 1044041, 16, 1044351);
-            AddRes(index, typeof(EcruCitrine), 1026252, 1, 1053098);
-
             AddCraft(typeof(Club), 1044566, 1025043, 65.0, 90.0, typeof(Board), 1044041, 9, 1044351);
             AddCraft(typeof(BlackStaff), 1044566, 1023568, 81.5, 106.5, typeof(Board), 1044041, 9, 1044351);
-
-            index = AddCraft(typeof(KotlBlackRod), 1044566, 1156990, 100.0, 160.0, typeof(Board), 1044041, 20, 1044351);
-            AddRes(index, typeof(BlackrockMoonstone), 1156993, 1, 1156992);
-            AddRes(index, typeof(StaffOfTheMagi), 1061600, 1, 1044253);
-            AddRecipe(index, (int)CarpRecipes.KotlBlackRod);
-            ForceNonExceptional(index);
 
             // Armor
             AddCraft(typeof(WoodenShield), 1062760, 1027034, 52.6, 77.6, typeof(Board), 1044041, 9, 1044351);
