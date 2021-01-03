@@ -1649,7 +1649,7 @@ namespace Server.Engines.BulkOrders
             new RewardType(200, typeof(Arrow), typeof(Bolt)),
             new RewardType(300, typeof(Bow), typeof(CompositeBow), typeof(Yumi)),
             new RewardType(300, typeof(Crossbow), typeof(HeavyCrossbow), typeof(RepeatingCrossbow)),
-            new RewardType(350, typeof(MagicalShortbow), typeof(RangersShortbow), typeof(LightweightShortbow), typeof(MysticalShortbow), typeof(AssassinsShortbow)),
+            new RewardType(350, typeof(MagicalShortbow), typeof(RangersShortbow), typeof(LightweightShortbow), typeof(MysticalShortbow)),
             new RewardType(250, typeof(ElvenCompositeLongbow), typeof(BarbedLongbow), typeof(SlayerLongbow), typeof(FrozenLongbow), typeof(LongbowOfMight)),
         };
 

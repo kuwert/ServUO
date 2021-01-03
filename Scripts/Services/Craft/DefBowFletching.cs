@@ -203,10 +203,6 @@ namespace Server.Engines.Craft
             AddRes(index, typeof(EcruCitrine), 1026252, 1, 1053098);
             AddRecipe(index, (int)BowRecipes.MysticalShortbow);
 
-            index = AddCraft(typeof(AssassinsShortbow), 1044566, 1073512, 75.0, 125.0, typeof(Board), 1044041, 15, 1044351);
-            AddRes(index, typeof(DarkSapphire), 1026249, 1, 1053098);
-            AddRecipe(index, (int)BowRecipes.AssassinsShortbow);
-
             SetSubRes(typeof(Board), 1072643);
 
             // Add every material you want the player to be able to choose from
