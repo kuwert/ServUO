@@ -1209,7 +1209,7 @@ namespace Server.Engines.BulkOrders
             new RewardType(250, typeof(TallCabinet), typeof(ShortCabinet)),
             new RewardType(250, typeof(RedArmoire), typeof(ElegantArmoire), typeof(MapleArmoire), typeof(CherryArmoire)),
             new RewardType(300, typeof(PlainWoodenChest), typeof(OrnateWoodenChest), typeof(GildedWoodenChest), typeof(WoodenFootLocker), typeof(FinishedWoodenChest)),
-            new RewardType(350, typeof(WildStaff), typeof(ArcanistsWildStaff), typeof(AncientWildStaff), typeof(ThornedWildStaff), typeof(HardenedWildStaff)),
+            new RewardType(350, typeof(WildStaff), typeof(ArcanistsWildStaff), typeof(ThornedWildStaff), typeof(HardenedWildStaff)),
             new RewardType(250, typeof(LapHarp), typeof(Lute), typeof(Drums), typeof(Harp)),
             new RewardType(200, typeof(GnarledStaff), typeof(QuarterStaff), typeof(ShepherdsCrook), typeof(Tetsubo), typeof(Bokuto)),
             new RewardType(300, typeof(WoodenBox), typeof(EmptyBookcase), typeof(WoodenBench), typeof(WoodenThrone)),

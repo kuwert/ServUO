@@ -386,10 +386,6 @@ namespace Server.Engines.Craft
             AddRes(index, typeof(WhitePearl), 1026253, 1, 1053098);
             AddRecipe(index, (int)CarpRecipes.ArcanistsWildStaff);
 
-            index = AddCraft(typeof(AncientWildStaff), 1044566, 1073550, 63.8, 113.8, typeof(Board), 1044041, 16, 1044351);
-            AddRes(index, typeof(PerfectEmerald), 1026251, 1, 1053098);
-            AddRecipe(index, (int)CarpRecipes.AncientWildStaff);
-
             index = AddCraft(typeof(ThornedWildStaff), 1044566, 1073551, 63.8, 113.8, typeof(Board), 1044041, 16, 1044351);
             AddRes(index, typeof(FireRuby), 1026254, 1, 1053098);
             AddRecipe(index, (int)CarpRecipes.ThornedWildStaff);
