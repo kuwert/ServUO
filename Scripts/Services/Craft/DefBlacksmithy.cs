@@ -456,10 +456,6 @@ namespace Server.Engines.Craft
             AddRes(index, typeof(BrilliantAmber), 1032697, 1, 1044240);
             AddRecipe(index, (int)SmithRecipes.TrueWarCleaver);
 
-            index = AddCraft(typeof(AdventurersMachete), 1011081, 1073533, 75.0, 125.0, typeof(IronIngot), 1044036, 14, 1044037);
-            AddRes(index, typeof(WhitePearl), 1032694, 1, 1044240);
-            AddRecipe(index, (int)SmithRecipes.AdventurersMachete);
-
             index = AddCraft(typeof(OrcishMachete), 1011081, 1073534, 75.0, 125.0, typeof(IronIngot), 1044036, 14, 1044037);
             AddRes(index, typeof(Scourge), 1072136, 1, 1042081);
             AddRecipe(index, (int)SmithRecipes.OrcishMachete);
