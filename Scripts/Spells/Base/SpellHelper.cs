@@ -1744,7 +1744,7 @@ namespace Server.Spells
             {
                 var m = s.Caster;
 
-                if (m.Deleted || !m.Alive || m.Body != spell.Body || (m.Hue != spell.Hue && !BestialSetHelper.IsBerserk(m)))
+                if (m.Deleted || !m.Alive || m.Body != spell.Body || (m.Hue != spell.Hue))
                 {
                     RemoveContext(m, true);
                 }

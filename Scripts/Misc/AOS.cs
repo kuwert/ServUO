@@ -266,8 +266,6 @@ namespace Server
 
             SpiritualityVirtue.GetDamageReduction(m, ref totalDamage);
 
-            BestialSetHelper.OnDamage(m, from, ref totalDamage);
-
             if (type == DamageType.Spell && m != null && Feint.Registry.ContainsKey(m) && Feint.Registry[m].Enemy == from)
                 totalDamage -= (int)(damage * ((double)Feint.Registry[m].DamageReduction / 100));
 

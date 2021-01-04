@@ -2090,8 +2090,6 @@ namespace Server.Mobiles
             if (from == null)
                 return;
 
-            BestialSetHelper.OnHeal(this, from, ref amount);
-
             if (amount > 0 && from != this)
             {
                 for (int i = Aggressed.Count - 1; i >= 0; i--)
