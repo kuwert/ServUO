@@ -129,9 +129,9 @@ namespace Server.Engines.Quests
                 {
                     typeof(WarriorCasteQuest),
                     typeof(BigWormsQuest),
-                    typeof(ItsElementalQuest),
                     typeof(OrcishEliteQuest)
                 };
+
         public override void InitBody()
         {
             InitStats(100, 100, 25);
