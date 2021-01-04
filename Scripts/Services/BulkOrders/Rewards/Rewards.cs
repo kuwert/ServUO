@@ -1650,7 +1650,7 @@ namespace Server.Engines.BulkOrders
             new RewardType(300, typeof(Bow), typeof(CompositeBow), typeof(Yumi)),
             new RewardType(300, typeof(Crossbow), typeof(HeavyCrossbow), typeof(RepeatingCrossbow)),
             new RewardType(350, typeof(MagicalShortbow), typeof(RangersShortbow), typeof(LightweightShortbow), typeof(MysticalShortbow)),
-            new RewardType(250, typeof(ElvenCompositeLongbow), typeof(BarbedLongbow), typeof(SlayerLongbow), typeof(FrozenLongbow), typeof(LongbowOfMight)),
+            new RewardType(250, typeof(ElvenCompositeLongbow), typeof(SlayerLongbow), typeof(FrozenLongbow), typeof(LongbowOfMight)),
         };
 
         private static readonly int[][][] m_GoldTable = new int[][][]
