@@ -127,7 +127,6 @@ namespace Server.Engines.Quests
 
         public override Type[] Quests => new Type[]
                 {
-                    typeof(WarriorCasteQuest),
                     typeof(ShakingThingsUpQuest),
                     typeof(ArachnophobiaQuest),
                     typeof(SquishyQuest),
