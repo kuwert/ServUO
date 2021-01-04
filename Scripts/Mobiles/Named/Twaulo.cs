@@ -57,7 +57,7 @@ namespace Server.Mobiles
 
         public override Type[] UniqueList => new Type[] { typeof(Quell) };
 
-        public override Type[] SharedList => new Type[] { typeof(TheMostKnowledgePerson), typeof(OblivionsNeedle), typeof(BraveKnightOfTheBritannia) };
+        public override Type[] SharedList => new Type[] { typeof(TheMostKnowledgePerson), typeof(OblivionsNeedle) };
 
         public override Type[] DecorativeList => new Type[] { typeof(Pier), typeof(MonsterStatuette) };
 

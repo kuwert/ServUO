@@ -57,7 +57,6 @@ namespace Server.Mobiles
         public override Type[] UniqueList => new[] { typeof(Pacify) };
         public override Type[] SharedList => new[]
                 {
-                    typeof(BraveKnightOfTheBritannia),
                     typeof(DetectiveBoots),
                     typeof(EmbroideredOakLeafCloak),
                     typeof(LieutenantOfTheBritannianRoyalGuard)
