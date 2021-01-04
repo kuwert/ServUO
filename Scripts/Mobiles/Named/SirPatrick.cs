@@ -51,7 +51,6 @@ namespace Server.Mobiles
             AddLoot(LootPack.UltraRich, 2);
             AddLoot(LootPack.ArcanistScrolls);
             AddLoot(LootPack.LootItem<DisintegratingThesisNotes>(15.0));
-            AddLoot(LootPack.LootItem<AssassinChest>(5.0));
         }
 
         public override void Serialize(GenericWriter writer)

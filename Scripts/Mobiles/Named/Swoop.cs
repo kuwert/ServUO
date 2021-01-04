@@ -62,7 +62,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.Parrot, 1);
             AddLoot(LootPack.ArcanistScrolls, 0, 1);
             AddLoot(LootPack.RandomLootItem(
-                new[] { typeof(AssassinChest),  typeof(AssassinArms),   typeof(DeathChest),     typeof(MyrmidonArms),       typeof(MyrmidonLegs),
+                new[] { typeof(DeathChest),     typeof(MyrmidonArms),       typeof(MyrmidonLegs),
                         typeof(MyrmidonGorget), typeof(LeafweaveGloves),typeof(LeafweaveLegs),  typeof(LeafweavePauldrons), typeof(PaladinGloves),
                         typeof(PaladinGorget),  typeof(PaladinArms),    typeof(HunterArms),     typeof(HunterGloves),       typeof(HunterLegs),
                         typeof(HunterChest),    typeof(MyrmidonChest) }, 2.5, 1, false, false));
