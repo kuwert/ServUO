@@ -70,9 +70,9 @@ namespace Server.Mobiles
                     typeof(MyrmidonGloves),typeof(MyrmidonGorget),typeof(MyrmidonLegs),
                     typeof(MyrmidonArms),typeof(PaladinArms),typeof(PaladinGorget),
                     typeof(LeafweaveLegs),typeof(DeathChest),typeof(DeathGloves),
-                    typeof(DeathLegs),typeof(GreymistGloves),typeof(GreymistArms),
+                    typeof(DeathLegs),
                     typeof(AssassinChest),typeof(AssassinArms),typeof(HunterGloves),
-                    typeof(HunterLegs),typeof(GreymistLegs),typeof(MyrmidonChest)
+                    typeof(HunterLegs),typeof(MyrmidonChest)
 
                 }, 2.5, 1, false, false));
         }

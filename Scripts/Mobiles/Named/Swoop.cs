@@ -65,7 +65,7 @@ namespace Server.Mobiles
                 new[] { typeof(AssassinChest),  typeof(AssassinArms),   typeof(DeathChest),     typeof(MyrmidonArms),       typeof(MyrmidonLegs),
                         typeof(MyrmidonGorget), typeof(LeafweaveGloves),typeof(LeafweaveLegs),  typeof(LeafweavePauldrons), typeof(PaladinGloves),
                         typeof(PaladinGorget),  typeof(PaladinArms),    typeof(HunterArms),     typeof(HunterGloves),       typeof(HunterLegs),
-                        typeof(HunterChest),    typeof(GreymistArms),   typeof(GreymistGloves), typeof(GreymistLegs),       typeof(MyrmidonChest) }, 2.5, 1, false, false));
+                        typeof(HunterChest),    typeof(MyrmidonChest) }, 2.5, 1, false, false));
         }
 
         public override void Serialize(GenericWriter writer)
