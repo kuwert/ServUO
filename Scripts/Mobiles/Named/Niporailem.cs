@@ -14,7 +14,6 @@ namespace Server.Mobiles
 
         public override Type[] SharedSAList => new Type[]
         {
-            typeof(BladeOfBattle),
             typeof(DemonBridleRing),
             typeof(GiantSteps),
             typeof(SwordOfShatteredHopes)
