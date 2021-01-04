@@ -209,9 +209,9 @@ namespace Server.Engines.Quests
                     typeof(SimpleBowQuest),
                     typeof(IngeniousArcheryPartOneQuest),
                     typeof(IngeniousArcheryPartTwoQuest),
-                    typeof(IngeniousArcheryPartThreeQuest),
-                    typeof(StopHarpingOnMeQuest)
+                    typeof(IngeniousArcheryPartThreeQuest)
                 };
+
         public override void InitBody()
         {
             InitStats(100, 100, 25);

@@ -20,8 +20,6 @@ namespace Server.Engines.Quests
 
         public override Type[] Quests => new Type[]
                 {
-                    typeof(StopHarpingOnMeQuest),
-                    typeof(TheFarEyeQuest),
                     typeof(NothingFancyQuest)
                 };
         public override void InitBody()
