@@ -86,7 +86,6 @@ namespace Server.Mobiles
                     case 3:
                         break;
                     case 4:
-                        c.DropItem(new MyrmidonLegs());
                         break;
                 }
             }

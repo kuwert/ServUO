@@ -62,10 +62,9 @@ namespace Server.Mobiles
             AddLoot(LootPack.Parrot, 1);
             AddLoot(LootPack.ArcanistScrolls, 0, 1);
             AddLoot(LootPack.RandomLootItem(
-                new[] { typeof(DeathChest),     typeof(MyrmidonArms),       typeof(MyrmidonLegs),
-                        typeof(MyrmidonGorget), typeof(PaladinGloves),
-                        typeof(PaladinGorget),  typeof(PaladinArms),
-                        typeof(MyrmidonChest) }, 2.5, 1, false, false));
+                new[] { typeof(DeathChest),
+                        typeof(PaladinGloves),
+                        typeof(PaladinGorget),  typeof(PaladinArms)}, 2.5, 1, false, false));
         }
 
         public override void Serialize(GenericWriter writer)

@@ -67,12 +67,9 @@ namespace Server.Mobiles
             AddLoot(LootPack.ArcanistScrolls);
             AddLoot(LootPack.RandomLootItem(new System.Type[]
                 {
-                    typeof(MyrmidonGloves),typeof(MyrmidonGorget),typeof(MyrmidonLegs),
-                    typeof(MyrmidonArms),typeof(PaladinArms),typeof(PaladinGorget),
+                    typeof(PaladinArms),typeof(PaladinGorget),
                     typeof(DeathChest),typeof(DeathGloves),
                     typeof(DeathLegs),
-                    typeof(MyrmidonChest)
-
                 }, 2.5, 1, false, false));
         }
 
