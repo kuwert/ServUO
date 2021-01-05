@@ -82,7 +82,6 @@ namespace Server.Mobiles
                         c.DropItem(new DeathGloves());
                         break;
                     case 2:
-                        c.DropItem(new LeafweaveLegs());
                         break;
                     case 3:
                         break;
