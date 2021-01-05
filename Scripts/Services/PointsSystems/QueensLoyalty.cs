@@ -118,7 +118,6 @@ namespace Server.Engines.Points
             Entries[typeof(CoralSnake)] = new Tuple<double, double>(3, .3);
             Entries[typeof(Korpre)] = new Tuple<double, double>(3, .3);
             Entries[typeof(Ortanord)] = new Tuple<double, double>(3, .3);
-            //Entries[typeof(ClanRibbonCourtier)]     = new Tuple<double, double>(5, .5);
             Entries[typeof(Daemon)] = new Tuple<double, double>(5, .5);
             Entries[typeof(TrapdoorSpider)] = new Tuple<double, double>(5, .5);
             Entries[typeof(Gremlin)] = new Tuple<double, double>(5, .5);
@@ -168,9 +167,7 @@ namespace Server.Engines.Points
             Entries[typeof(ABrokenVaseQuest)] = new Tuple<double, double>(5, 0.5);
             Entries[typeof(PuttingThePiecesTogetherQuest)] = new Tuple<double, double>(15, 1.5);
             Entries[typeof(ALittleSomething)] = new Tuple<double, double>(25, 2.5);
-            Entries[typeof(TheExchangeQuest)] = new Tuple<double, double>(35, 3.5);
             Entries[typeof(YeOldeGargishQuest)] = new Tuple<double, double>(50, 5.0);
-            Entries[typeof(AWorthyPropositionQuest)] = new Tuple<double, double>(50, 5.0);
             Entries[typeof(UnusualGoods)] = new Tuple<double, double>(75, 7.5);
         }
 
