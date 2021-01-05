@@ -105,7 +105,6 @@ namespace Server.Mobiles
             AddLoot(LootPack.LootItem<TragicRemainsOfTravesty>(10.0));
             AddLoot(LootPack.LootItem<ImprisonedDog>(5.0));
             AddLoot(LootPack.LootItem<MarkOfTravesty>(5.0));
-            AddLoot(LootPack.LootItem<MalekisHonor>(2.5));
         }
 
         public Travesty(Serial serial)

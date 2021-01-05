@@ -73,7 +73,6 @@ namespace Server.Mobiles
                     case 0:
                         break;
                     case 1:
-                        c.DropItem(new MalekisHonor());
                         break;
                 }
             }
