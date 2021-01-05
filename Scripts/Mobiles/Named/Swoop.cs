@@ -64,8 +64,8 @@ namespace Server.Mobiles
             AddLoot(LootPack.RandomLootItem(
                 new[] { typeof(DeathChest),     typeof(MyrmidonArms),       typeof(MyrmidonLegs),
                         typeof(MyrmidonGorget), typeof(LeafweaveGloves),typeof(LeafweaveLegs),  typeof(LeafweavePauldrons), typeof(PaladinGloves),
-                        typeof(PaladinGorget),  typeof(PaladinArms),    typeof(HunterArms),     typeof(HunterGloves),       typeof(HunterLegs),
-                        typeof(HunterChest),    typeof(MyrmidonChest) }, 2.5, 1, false, false));
+                        typeof(PaladinGorget),  typeof(PaladinArms),
+                        typeof(MyrmidonChest) }, 2.5, 1, false, false));
         }
 
         public override void Serialize(GenericWriter writer)

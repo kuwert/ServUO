@@ -71,7 +71,6 @@ namespace Server.Mobiles
                 switch (Utility.Random(2))
                 {
                     case 0:
-                        c.DropItem(new HunterLegs());
                         break;
                     case 1:
                         c.DropItem(new MalekisHonor());

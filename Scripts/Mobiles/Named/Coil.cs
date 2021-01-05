@@ -85,7 +85,6 @@ namespace Server.Mobiles
                         c.DropItem(new LeafweaveLegs());
                         break;
                     case 3:
-                        c.DropItem(new HunterLegs());
                         break;
                     case 4:
                         c.DropItem(new MyrmidonLegs());

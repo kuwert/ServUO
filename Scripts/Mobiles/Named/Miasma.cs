@@ -71,8 +71,7 @@ namespace Server.Mobiles
                     typeof(MyrmidonArms),typeof(PaladinArms),typeof(PaladinGorget),
                     typeof(LeafweaveLegs),typeof(DeathChest),typeof(DeathGloves),
                     typeof(DeathLegs),
-                    typeof(HunterGloves),
-                    typeof(HunterLegs),typeof(MyrmidonChest)
+                    typeof(MyrmidonChest)
 
                 }, 2.5, 1, false, false));
         }
