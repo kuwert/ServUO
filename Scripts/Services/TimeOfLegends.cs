@@ -138,7 +138,6 @@ namespace Server
         public static Type[] ArmorDropTypes => _ArmorDropTypes;
         private static readonly Type[] _ArmorDropTypes =
         {
-            typeof(DardensBustier), typeof(DardensHelm), typeof(DardensLegs), typeof(DardensSleeves), typeof(DardensTunic)
         };
 
         public static int[] RecipeTypes => _RecipeTypes;
