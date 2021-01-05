@@ -344,22 +344,6 @@ namespace Server.Engines.Craft
             index = AddCraft(typeof(ElvenQuiver), 1015283, 1032657, 65.0, 115.0, typeof(Leather), 1044462, 28, 1044463);
             AddRecipe(index, (int)TailorRecipe.ElvenQuiver);
 
-            index = AddCraft(typeof(QuiverOfFire), 1015283, 1073109, 65.0, 115.0, typeof(Leather), 1044462, 28, 1044463);
-            AddRes(index, typeof(FireRuby), 1032695, 15, 1042081);
-            AddRecipe(index, (int)TailorRecipe.QuiverOfFire);
-
-            index = AddCraft(typeof(QuiverOfIce), 1015283, 1073110, 65.0, 115.0, typeof(Leather), 1044462, 28, 1044463);
-            AddRes(index, typeof(WhitePearl), 1032694, 15, 1042081);
-            AddRecipe(index, (int)TailorRecipe.QuiverOfIce);
-
-            index = AddCraft(typeof(QuiverOfBlight), 1015283, 1073111, 65.0, 115.0, typeof(Leather), 1044462, 28, 1044463);
-            AddRes(index, typeof(Blight), 1032675, 10, 1042081);
-            AddRecipe(index, (int)TailorRecipe.QuiverOfBlight);
-
-            index = AddCraft(typeof(QuiverOfLightning), 1015283, 1073112, 65.0, 115.0, typeof(Leather), 1044462, 28, 1044463);
-            AddRes(index, typeof(Corruption), 1032676, 10, 1042081);
-            AddRecipe(index, (int)TailorRecipe.QuiverOfLightning);
-
             index = AddCraft(typeof(LeatherContainerEngraver), 1015283, 1072152, 75.0, 100.0, typeof(Bone), 1049064, 1, 1049063);
             AddRes(index, typeof(Leather), 1044462, 6, 1044463);
             AddRes(index, typeof(SpoolOfThread), 1073462, 2, 1073463);

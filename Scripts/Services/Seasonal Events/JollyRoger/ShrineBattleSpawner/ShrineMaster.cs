@@ -309,7 +309,6 @@ namespace Server.Engines.JollyRoger
                     SetWearable(new LeatherGloves());
                     SetWearable(new Doublet());
                     SetWearable(new Cap());
-                    SetWearable(new QuiverOfInfinity());
                     SetWearable(new LeatherArms());
                     SetWearable(new LeatherLegs());
                     SetWearable(new Sandals());
@@ -321,7 +320,6 @@ namespace Server.Engines.JollyRoger
                     SetWearable(new BodySash(1193));
                     SetWearable(new ThighBoots());
                     SetWearable(new Cap());
-                    SetWearable(new QuiverOfInfinity());
                     break;
                 case MasterTitle.Wizard:
                     SetWearable(new Kilt(1156));
