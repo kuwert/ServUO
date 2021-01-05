@@ -85,7 +85,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.LootItem<ParrotItem>(60.0));
             AddLoot(LootPack.LootItem<GrizzledMareStatuette>(5.0));
 
-            AddLoot(LootPack.RandomLootItem(new[] { typeof(GrizzleGauntlets), typeof(GrizzleGreaves), typeof(GrizzleHelm), typeof(GrizzleTunic), typeof(GrizzleVambraces) }, 5.0, 1));
+            AddLoot(LootPack.RandomLootItem(new Type[] { }, 5.0, 1));
         }
 
         public override int GetDeathSound()
