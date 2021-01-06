@@ -348,8 +348,6 @@ namespace Server.Engines.Quests
         public TaleOfTailQuest()
             : base()
         {
-            AddObjective(new ObtainObjective(typeof(AbscessTail), "abscess' tail", 1));
-
             AddReward(new BaseReward(typeof(TreasureBag), 1072583));
         }
 
