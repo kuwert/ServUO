@@ -57,12 +57,6 @@ namespace Server.Mobiles
                     AddItem(new CompositeBow());
                     break;
             }
-
-            AddItem(new RangerChest());
-            AddItem(new RangerArms());
-            AddItem(new RangerGloves());
-            AddItem(new RangerGorget());
-            AddItem(new RangerLegs());
         }
 
         public override void GenerateLoot()
