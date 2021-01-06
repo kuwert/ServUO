@@ -14,7 +14,7 @@ namespace Server.Items
     }
 
     [Alterable(typeof(DefTailoring), typeof(GargishLeatherWingArmor), true)]
-    public class BaseQuiver : Container, ICraftable, ISetItem, IVvVItem, IOwnerRestricted, IRangeDamage, IArtifact, ICanBeElfOrHuman
+    public class BaseQuiver : Container, ICraftable, IVvVItem, IOwnerRestricted, IRangeDamage, IArtifact, ICanBeElfOrHuman
     {
         private bool _VvVItem;
         private Mobile _Owner;
@@ -411,17 +411,6 @@ namespace Server.Items
 
                 if (ranged != null)
                     ranged.InvalidateProperties();
-
-                if (IsSetItem)
-                {
-                    m_SetEquipped = SetHelper.FullSetEquipped(mob, SetID, Pieces);
-
-                    if (m_SetEquipped)
-                    {
-                        m_LastEquipped = true;
-                        SetHelper.AddSetBonus(mob, SetID);
-                    }
-                }
             }
         }
 
@@ -433,21 +422,7 @@ namespace Server.Items
 
                 m_Attributes.RemoveStatBonuses(mob);
                 m_AosSkillBonuses.Remove();
-
-                if (IsSetItem && m_SetEquipped)
-                    SetHelper.RemoveSetBonus(mob, SetID, this);
             }
-        }
-
-        public override bool OnDragLift(Mobile from)
-        {
-            if (Parent is Mobile && from == Parent)
-            {
-                if (IsSetItem && m_SetEquipped)
-                    SetHelper.RemoveSetBonus(from, SetID, this);
-            }
-
-            return base.OnDragLift(from);
         }
 
         public override bool CanEquip(Mobile m)
@@ -643,20 +618,6 @@ namespace Server.Items
             if ((prop = m_Attributes.LowerAmmoCost) > 0)
                 list.Add(1075208, prop.ToString()); // Lower Ammo Cost ~1_Percentage~%
 
-            if (IsSetItem)
-            {
-                list.Add(1073491, Pieces.ToString()); // Part of a Weapon/Armor Set (~1_val~ pieces)
-
-                if (BardMasteryBonus)
-                    list.Add(1151553); // Activate: Bard Mastery Bonus x2<br>(Effect: 1 min. Cooldown: 30 min.)
-
-                if (m_SetEquipped)
-                {
-                    list.Add(1073492); // Full Weapon/Armor Set Present					
-                    SetHelper.GetSetProperties(list, this);
-                }
-            }
-
             base.AddResistanceProperties(list);
 
             double weight = 0;
@@ -668,12 +629,6 @@ namespace Server.Items
 
             if ((prop = m_WeightReduction) != 0)
                 list.Add(1072210, prop.ToString()); // Weight reduction: ~1_PERCENTAGE~%	
-
-            if (IsSetItem && !m_SetEquipped)
-            {
-                list.Add(1072378); // <br>Only when full set is present:				
-                SetHelper.GetSetProperties(list, this);
-            }
         }
 
         public int SetResistBonus(ResistanceType resist)
@@ -1006,13 +961,7 @@ namespace Server.Items
             return quality;
         }
 
-        public virtual SetItem SetID => SetItem.None;
-
         public virtual int Pieces => 0;
-
-        public virtual bool BardMasteryBonus => (SetID == SetItem.Virtuoso);
-
-        public bool IsSetItem => SetID != SetItem.None;
 
         private int m_SetHue;
         private bool m_SetEquipped;

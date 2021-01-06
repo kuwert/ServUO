@@ -27,7 +27,7 @@ namespace Server.Items
         SlayerName Slayer2 { get; set; }
     }
 
-    public abstract class BaseWeapon : Item, IWeapon, IUsesRemaining, ICraftable, ISlayer, IDurability, ISetItem, IVvVItem, IOwnerRestricted, IResource, IArtifact, ICombatEquipment, IEngravable, IQuality
+    public abstract class BaseWeapon : Item, IWeapon, IUsesRemaining, ICraftable, ISlayer, IDurability, IVvVItem, IOwnerRestricted, IResource, IArtifact, ICombatEquipment, IEngravable, IQuality
     {
         private string m_EngravedText;
 
@@ -896,17 +896,6 @@ namespace Server.Items
 
                 m_AosSkillBonuses.AddTo(from);
 
-                if (IsSetItem)
-                {
-                    m_SetEquipped = SetHelper.FullSetEquipped(from, SetID, Pieces);
-
-                    if (m_SetEquipped)
-                    {
-                        m_LastEquipped = true;
-                        SetHelper.AddSetBonus(from, SetID);
-                    }
-                }
-
                 if (HasSocket<Caddellite>())
                 {
                     Caddellite.UpdateBuff(from);
@@ -956,11 +945,6 @@ namespace Server.Items
 
                 SkillMasterySpell.OnWeaponRemoved(m, this);
                 ForceOfNature.Remove(m);
-
-                if (IsSetItem && m_SetEquipped)
-                {
-                    SetHelper.RemoveSetBonus(m, SetID, this);
-                }
 
                 if (HasSocket<Caddellite>())
                 {
@@ -1813,7 +1797,7 @@ namespace Server.Items
                     attacker.LocalOverheadMessage(MessageType.Regular, 0x3B2, 500263); // *Acid blood scars your weapon!*
                 }
 
-                int selfRepair = m_AosWeaponAttributes.SelfRepair + (IsSetItem && m_SetEquipped ? m_SetSelfRepair : 0);
+                int selfRepair = m_AosWeaponAttributes.SelfRepair;
 
                 if (selfRepair > 0 && NextSelfRepair < DateTime.UtcNow)
                 {
@@ -1906,7 +1890,7 @@ namespace Server.Items
 
             CheckSlayerResult cs1 = CheckSlayers(attacker, defender, Slayer);
             CheckSlayerResult cs2 = CheckSlayers(attacker, defender, Slayer2);
-            CheckSlayerResult suit = CheckSlayers(attacker, defender, SetHelper.GetSetSlayer(attacker));
+            CheckSlayerResult suit = CheckSlayerResult.None;
             CheckSlayerResult tal = CheckTalismanSlayer(attacker, defender);
 
             if (cs1 == CheckSlayerResult.None && cs2 == CheckSlayerResult.None)
@@ -1988,7 +1972,7 @@ namespace Server.Items
 
             TransformContext context = TransformationSpellHelper.GetContext(defender);
 
-            if ((m_Slayer == SlayerName.Silver || m_Slayer2 == SlayerName.Silver || SetHelper.GetSetSlayer(attacker) == SlayerName.Silver)
+            if ((m_Slayer == SlayerName.Silver || m_Slayer2 == SlayerName.Silver)
                 && ((context != null && context.Spell is NecromancerSpell && context.Type != typeof(HorrificBeastSpell))
                 || (defender is BaseCreature && (defender.Body == 747 || defender.Body == 748 || defender.Body == 749 || defender.Hue == 0x847E))))
             {
@@ -2814,7 +2798,7 @@ namespace Server.Items
             {
                 SlayerEntry defSlayer = SlayerGroup.GetEntryByName(defISlayer.Slayer);
                 SlayerEntry defSlayer2 = SlayerGroup.GetEntryByName(defISlayer.Slayer2);
-                SlayerEntry defSetSlayer = SlayerGroup.GetEntryByName(SetHelper.GetSetSlayer(defender));
+                SlayerEntry defSetSlayer = defSlayer;
 
                 if (defISlayer is Item && defSlayer == null && defSlayer2 == null)
                 {
@@ -4468,22 +4452,6 @@ namespace Server.Items
         {
             base.AddNameProperties(list);
 
-            #region Mondain's Legacy Sets
-            if (IsSetItem)
-            {
-                list.Add(1073491, Pieces.ToString()); // Part of a Weapon/Armor Set (~1_val~ pieces)
-
-                if (BardMasteryBonus)
-                    list.Add(1151553); // Activate: Bard Mastery Bonus x2<br>(Effect: 1 min. Cooldown: 30 min.)
-
-                if (m_SetEquipped)
-                {
-                    list.Add(1073492); // Full Weapon/Armor Set Present
-                    GetSetProperties(list);
-                }
-            }
-            #endregion
-
             if (m_ExtendedWeaponAttributes.Focus > 0)
             {
                 list.Add(1150018); // Focus
@@ -5109,12 +5077,6 @@ namespace Server.Items
                 list.Add(1060639, "{0}\t{1}", m_Hits, m_MaxHits); // durability ~1_val~ / ~2_val~
             }
 
-            if (IsSetItem && !m_SetEquipped)
-            {
-                list.Add(1072378); // <br>Only when full set is present:
-                GetSetProperties(list);
-            }
-
             if (LastParryChance > 0)
             {
                 list.Add(1158861, LastParryChance.ToString()); // Last Parry Chance: ~1_val~%
@@ -5252,25 +5214,7 @@ namespace Server.Items
         }
 
         #region Mondain's Legacy Sets
-        public override bool OnDragLift(Mobile from)
-        {
-            if (Parent is Mobile && from == Parent)
-            {
-                if (IsSetItem && m_SetEquipped)
-                {
-                    SetHelper.RemoveSetBonus(from, SetID, this);
-                }
-            }
-
-            return base.OnDragLift(from);
-        }
-
-        public virtual SetItem SetID => SetItem.None;
         public virtual int Pieces => 0;
-
-        public virtual bool BardMasteryBonus => (SetID == SetItem.Virtuoso);
-
-        public bool IsSetItem => SetID != SetItem.None;
 
         private int m_SetHue;
         private bool m_SetEquipped;
@@ -5391,8 +5335,6 @@ namespace Server.Items
             {
                 list.Add(1060450, prop.ToString()); // self repair ~1_val~
             }
-
-            SetHelper.GetSetProperties(list, this);
         }
 
         public int SetResistBonus(ResistanceType resist)

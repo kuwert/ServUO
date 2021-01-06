@@ -21,7 +21,7 @@ namespace Server.Items
         Diamond
     }
 
-    public abstract class BaseJewel : Item, ICraftable, ISetItem, IWearableDurability, IResource, IVvVItem, IOwnerRestricted, ITalismanProtection, IArtifact, ICombatEquipment, IQuality
+    public abstract class BaseJewel : Item, ICraftable, IWearableDurability, IResource, IVvVItem, IOwnerRestricted, ITalismanProtection, IArtifact, ICombatEquipment, IQuality
     {
         private int m_MaxHitPoints;
         private int m_HitPoints;
@@ -599,19 +599,6 @@ namespace Server.Items
                 }
 
                 from.CheckStatTimers();
-
-                #region Mondain's Legacy Sets
-                if (IsSetItem)
-                {
-                    m_SetEquipped = SetHelper.FullSetEquipped(from, SetID, Pieces);
-
-                    if (m_SetEquipped)
-                    {
-                        m_LastEquipped = true;
-                        SetHelper.AddSetBonus(from, SetID);
-                    }
-                }
-                #endregion
             }
         }
 
@@ -630,11 +617,6 @@ namespace Server.Items
                 from.RemoveStatMod(modName + "Int");
 
                 from.CheckStatTimers();
-
-                #region Mondain's Legacy Sets
-                if (IsSetItem && m_SetEquipped)
-                    SetHelper.RemoveSetBonus(from, SetID, this);
-                #endregion
             }
         }
 
@@ -711,22 +693,6 @@ namespace Server.Items
 
             if (m_GorgonLenseCharges > 0)
                 list.Add(1112590, m_GorgonLenseCharges.ToString()); //Gorgon Lens Charges: ~1_val~
-
-            #region Mondain's Legacy Sets
-            if (IsSetItem)
-            {
-                list.Add(1080240, Pieces.ToString()); // Part of a Jewelry Set (~1_val~ pieces)
-
-                if (BardMasteryBonus)
-                    list.Add(1151553); // Activate: Bard Mastery Bonus x2<br>(Effect: 1 min. Cooldown: 30 min.)
-
-                if (m_SetEquipped)
-                {
-                    list.Add(1080241); // Full Jewelry Set Present					
-                    SetHelper.GetSetProperties(list, this);
-                }
-            }
-            #endregion
 
             m_NegativeAttributes.GetProperties(list, this);
             m_AosSkillBonuses.GetProperties(list);
@@ -862,12 +828,6 @@ namespace Server.Items
 
             if (m_HitPoints >= 0 && m_MaxHitPoints > 0)
                 list.Add(1060639, "{0}\t{1}", m_HitPoints, m_MaxHitPoints); // durability ~1_val~ / ~2_val~
-
-            if (IsSetItem && !m_SetEquipped)
-            {
-                list.Add(1072378); // <br>Only when full set is present:				
-                SetHelper.GetSetProperties(list, this);
-            }
         }
 
         public override void AddItemPowerProperties(ObjectPropertyList list)
@@ -1194,25 +1154,10 @@ namespace Server.Items
         #endregion
 
         #region Mondain's Legacy Sets
-        public override bool OnDragLift(Mobile from)
-        {
-            if (Parent is Mobile && from == Parent)
-            {
-                if (IsSetItem && m_SetEquipped)
-                    SetHelper.RemoveSetBonus(from, SetID, this);
-            }
 
-            return base.OnDragLift(from);
-        }
-
-        public virtual SetItem SetID => SetItem.None;
         public virtual int Pieces => 0;
 
-        public virtual bool BardMasteryBonus => (SetID == SetItem.Virtuoso);
-
         public virtual bool MixedSet => false;
-
-        public bool IsSetItem => SetID == SetItem.None ? false : true;
 
         private int m_SetHue;
         private bool m_SetEquipped;

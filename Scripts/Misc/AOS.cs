@@ -556,16 +556,6 @@ namespace Server
                     if (obj is FishingPole)
                         value += ((FishingPole)obj).GetLuckBonus();
                 }
-
-                if (obj is ISetItem)
-                {
-                    ISetItem item = (ISetItem)obj;
-
-                    attrs = item.SetAttributes;
-
-                    if (attrs != null && item.LastEquipped)
-                        value += attrs[attribute];
-                }
             }
 
             #region Malus/Buff Handler

@@ -370,7 +370,7 @@ namespace Server.Engines.Craft
             {
                 BaseWeapon weapon = (BaseWeapon)item;
 
-                if (weapon.SetID != SetItem.None || !weapon.CanAlter || weapon.NegativeAttributes.Antique != 0)
+                if (!weapon.CanAlter || weapon.NegativeAttributes.Antique != 0)
                     return false;
 
                 if ((Race.Gargoyle.ValidateEquipment(weapon) && !weapon.IsArtifact))
@@ -381,7 +381,7 @@ namespace Server.Engines.Craft
             {
                 BaseArmor armor = (BaseArmor)item;
 
-                if (armor.SetID != SetItem.None || !armor.CanAlter || armor.NegativeAttributes.Antique != 0)
+                if (!armor.CanAlter || armor.NegativeAttributes.Antique != 0)
                     return false;
 
                 if ((Race.Gargoyle.ValidateEquipment(armor) && !armor.IsArtifact))
@@ -395,7 +395,7 @@ namespace Server.Engines.Craft
             {
                 BaseClothing cloth = (BaseClothing)item;
 
-                if (cloth.SetID != SetItem.None || !cloth.CanAlter || cloth.NegativeAttributes.Antique != 0)
+                if (!cloth.CanAlter || cloth.NegativeAttributes.Antique != 0)
                     return false;
 
                 if ((Race.Gargoyle.ValidateEquipment(cloth) && !cloth.IsArtifact))
@@ -406,7 +406,7 @@ namespace Server.Engines.Craft
             {
                 BaseQuiver quiver = (BaseQuiver)item;
 
-                if (quiver.SetID != SetItem.None || !quiver.CanAlter)
+                if (!quiver.CanAlter)
                     return false;
             }
 

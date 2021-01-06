@@ -1055,13 +1055,11 @@ namespace Server.Mobiles
                     continue;
                 }
 
-                ISetItem setItem = item as ISetItem;
-
-                Resistances[0] += setItem != null && setItem.SetEquipped ? setItem.SetResistBonus(ResistanceType.Physical) : item.PhysicalResistance;
-                Resistances[1] += setItem != null && setItem.SetEquipped ? setItem.SetResistBonus(ResistanceType.Fire) : item.FireResistance;
-                Resistances[2] += setItem != null && setItem.SetEquipped ? setItem.SetResistBonus(ResistanceType.Cold) : item.ColdResistance;
-                Resistances[3] += setItem != null && setItem.SetEquipped ? setItem.SetResistBonus(ResistanceType.Poison) : item.PoisonResistance;
-                Resistances[4] += setItem != null && setItem.SetEquipped ? setItem.SetResistBonus(ResistanceType.Energy) : item.EnergyResistance;
+                Resistances[0] += item.PhysicalResistance;
+                Resistances[1] += item.FireResistance;
+                Resistances[2] += item.ColdResistance;
+                Resistances[3] += item.PoisonResistance;
+                Resistances[4] += item.EnergyResistance;
             }
 
             for (int i = 0; i < Resistances.Length; ++i)

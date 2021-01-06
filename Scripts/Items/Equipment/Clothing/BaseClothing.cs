@@ -16,7 +16,7 @@ namespace Server.Items
         int TempHue { get; set; }
     }
 
-    public abstract class BaseClothing : Item, IDyable, IScissorable, ICraftable, IWearableDurability, IResource, ISetItem, IVvVItem, IOwnerRestricted, IArtifact, ICombatEquipment, IEngravable, IQuality
+    public abstract class BaseClothing : Item, IDyable, IScissorable, ICraftable, IWearableDurability, IResource, IVvVItem, IOwnerRestricted, IArtifact, ICombatEquipment, IEngravable, IQuality
     {
         private string m_EngravedText;
 
@@ -561,17 +561,6 @@ namespace Server.Items
             {
                 m_AosSkillBonuses.AddTo(mob);
 
-                if (IsSetItem)
-                {
-                    m_SetEquipped = SetHelper.FullSetEquipped(mob, SetID, Pieces);
-
-                    if (m_SetEquipped)
-                    {
-                        m_LastEquipped = true;
-                        SetHelper.AddSetBonus(mob, SetID);
-                    }
-                }
-
                 AddStatBonuses(mob);
                 mob.CheckStatTimers();
             }
@@ -586,9 +575,6 @@ namespace Server.Items
             if (mob != null)
             {
                 m_AosSkillBonuses.Remove();
-
-                if (IsSetItem && m_SetEquipped)
-                    SetHelper.RemoveSetBonus(mob, SetID, this);
 
                 string modName = Serial.ToString();
 
@@ -620,7 +606,7 @@ namespace Server.Items
 
             if (chance >= Utility.Random(100)) // 25% chance to lower durability
             {
-                int selfRepair = m_AosClothingAttributes.SelfRepair + (IsSetItem && m_SetEquipped ? m_SetSelfRepair : 0);
+                int selfRepair = m_AosClothingAttributes.SelfRepair;
 
                 if (selfRepair > 0 && NextSelfRepair < DateTime.UtcNow)
                 {
@@ -905,27 +891,6 @@ namespace Server.Items
             if (m_GorgonLenseCharges > 0)
                 list.Add(1112590, m_GorgonLenseCharges.ToString()); //Gorgon Lens Charges: ~1_val~
 
-            if (IsSetItem)
-            {
-                if (MixedSet)
-                    list.Add(1073491, Pieces.ToString()); // Part of a Weapon/Armor Set (~1_val~ pieces)
-                else
-                    list.Add(1072376, Pieces.ToString()); // Part of an Armor Set (~1_val~ pieces)
-
-                if (BardMasteryBonus)
-                    list.Add(1151553); // Activate: Bard Mastery Bonus x2<br>(Effect: 1 min. Cooldown: 30 min.)
-
-                if (m_SetEquipped)
-                {
-                    if (MixedSet)
-                        list.Add(1073492); // Full Weapon/Armor Set Present
-                    else
-                        list.Add(1072377); // Full Armor Set Present
-
-                    GetSetProperties(list);
-                }
-            }
-
             if (RaceDefinitions.GetRequiredRace(this) == Race.Elf)
             {
                 list.Add(1075086); // Elves Only
@@ -1121,12 +1086,6 @@ namespace Server.Items
 
             if (m_HitPoints >= 0 && m_MaxHitPoints > 0)
                 list.Add(1060639, "{0}\t{1}", m_HitPoints, m_MaxHitPoints); // durability ~1_val~ / ~2_val~
-
-            if (IsSetItem && !m_SetEquipped)
-            {
-                list.Add(1072378); // <br>Only when full set is present:				
-                GetSetProperties(list);
-            }
         }
 
         public override void AddItemPowerProperties(ObjectPropertyList list)
@@ -1769,26 +1728,9 @@ namespace Server.Items
 
         #endregion
 
-        public override bool OnDragLift(Mobile from)
-        {
-            if (Parent is Mobile && from == Parent)
-            {
-                if (IsSetItem && m_SetEquipped)
-                    SetHelper.RemoveSetBonus(from, SetID, this);
-            }
-
-            return base.OnDragLift(from);
-        }
-
-        public virtual SetItem SetID => SetItem.None;
-
         public virtual int Pieces => 0;
 
-        public virtual bool BardMasteryBonus => (SetID == SetItem.Virtuoso);
-
         public virtual bool MixedSet => false;
-
-        public bool IsSetItem => SetID == SetItem.None ? false : true;
 
         private int m_SetHue;
         private bool m_SetEquipped;
@@ -1952,9 +1894,6 @@ namespace Server.Items
 
             if (!m_SetEquipped)
             {
-                if (SetID == SetItem.Virtuoso)
-                    list.Add(1151571); // Mastery Bonus Cooldown: 15 min.
-
                 if (m_SetPhysicalBonus != 0)
                     list.Add(1072382, m_SetPhysicalBonus.ToString()); // physical resist +~1_val~%
 
@@ -1970,55 +1909,20 @@ namespace Server.Items
                 if (m_SetEnergyBonus != 0)
                     list.Add(1072386, m_SetEnergyBonus.ToString()); // energy resist +~1_val~%			
             }
-            else if (m_SetEquipped && SetHelper.ResistsBonusPerPiece(this) && RootParentEntity is Mobile)
-            {
-                Mobile m = (Mobile)RootParentEntity;
-
-                if (m_SetPhysicalBonus != 0)
-                    list.Add(1080361, SetHelper.GetSetTotalResist(m, ResistanceType.Physical).ToString()); // physical resist ~1_val~% (total)
-
-                if (m_SetFireBonus != 0)
-                    list.Add(1080362, SetHelper.GetSetTotalResist(m, ResistanceType.Fire).ToString()); // fire resist ~1_val~% (total)
-
-                if (m_SetColdBonus != 0)
-                    list.Add(1080363, SetHelper.GetSetTotalResist(m, ResistanceType.Cold).ToString()); // cold resist ~1_val~% (total)
-
-                if (m_SetPoisonBonus != 0)
-                    list.Add(1080364, SetHelper.GetSetTotalResist(m, ResistanceType.Poison).ToString()); // poison resist ~1_val~% (total)
-
-                if (m_SetEnergyBonus != 0)
-                    list.Add(1080365, SetHelper.GetSetTotalResist(m, ResistanceType.Energy).ToString()); // energy resist ~1_val~% (total)
-            }
 
             if ((prop = m_SetSelfRepair) != 0)
                 list.Add(1060450, prop.ToString()); // self repair ~1_val~		
-
-            SetHelper.GetSetProperties(list, this);
         }
 
         public int SetResistBonus(ResistanceType resist)
         {
-            if (SetHelper.ResistsBonusPerPiece(this))
+            switch (resist)
             {
-                switch (resist)
-                {
-                    case ResistanceType.Physical: return m_SetEquipped ? PhysicalResistance + m_SetPhysicalBonus : PhysicalResistance;
-                    case ResistanceType.Fire: return m_SetEquipped ? FireResistance + m_SetFireBonus : FireResistance;
-                    case ResistanceType.Cold: return m_SetEquipped ? ColdResistance + m_SetColdBonus : ColdResistance;
-                    case ResistanceType.Poison: return m_SetEquipped ? PoisonResistance + m_SetPoisonBonus : PoisonResistance;
-                    case ResistanceType.Energy: return m_SetEquipped ? EnergyResistance + m_SetEnergyBonus : EnergyResistance;
-                }
-            }
-            else
-            {
-                switch (resist)
-                {
-                    case ResistanceType.Physical: return m_SetEquipped ? LastEquipped ? (PhysicalResistance * Pieces) + m_SetPhysicalBonus : 0 : PhysicalResistance;
-                    case ResistanceType.Fire: return m_SetEquipped ? LastEquipped ? (FireResistance * Pieces) + m_SetFireBonus : 0 : FireResistance;
-                    case ResistanceType.Cold: return m_SetEquipped ? LastEquipped ? (ColdResistance * Pieces) + m_SetColdBonus : 0 : ColdResistance;
-                    case ResistanceType.Poison: return m_SetEquipped ? LastEquipped ? (PoisonResistance * Pieces) + m_SetPoisonBonus : 0 : PoisonResistance;
-                    case ResistanceType.Energy: return m_SetEquipped ? LastEquipped ? (EnergyResistance * Pieces) + m_SetEnergyBonus : 0 : EnergyResistance;
-                }
+                case ResistanceType.Physical: return m_SetEquipped ? LastEquipped ? (PhysicalResistance * Pieces) + m_SetPhysicalBonus : 0 : PhysicalResistance;
+                case ResistanceType.Fire: return m_SetEquipped ? LastEquipped ? (FireResistance * Pieces) + m_SetFireBonus : 0 : FireResistance;
+                case ResistanceType.Cold: return m_SetEquipped ? LastEquipped ? (ColdResistance * Pieces) + m_SetColdBonus : 0 : ColdResistance;
+                case ResistanceType.Poison: return m_SetEquipped ? LastEquipped ? (PoisonResistance * Pieces) + m_SetPoisonBonus : 0 : PoisonResistance;
+                case ResistanceType.Energy: return m_SetEquipped ? LastEquipped ? (EnergyResistance * Pieces) + m_SetEnergyBonus : 0 : EnergyResistance;
             }
 
             return 0;
