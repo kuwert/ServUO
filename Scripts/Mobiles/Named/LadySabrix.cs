@@ -1,4 +1,5 @@
 using Server.Items;
+using System;
 
 namespace Server.Mobiles
 {
@@ -54,7 +55,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.ArcanistScrolls);
             AddLoot(LootPack.LootItem<SabrixsEye>(20.0));
             AddLoot(LootPack.Parrot);
-            AddLoot(LootPack.RandomLootItem(new System.Type[] { typeof(PaladinArms) }, 25.0, 1, false, false));
+            AddLoot(LootPack.RandomLootItem(new Type[] { }, 25.0, 1, false, false));
         }
 
         public override void Serialize(GenericWriter writer)

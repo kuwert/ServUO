@@ -67,7 +67,6 @@ namespace Server.Mobiles
             AddLoot(LootPack.ArcanistScrolls);
             AddLoot(LootPack.RandomLootItem(new System.Type[]
                 {
-                    typeof(PaladinArms),typeof(PaladinGorget)
                 }, 2.5, 1, false, false));
         }
 
