@@ -843,7 +843,6 @@ namespace Server.Gumps
             }
         }
 
-        #region Mondain's Legacy
         private static readonly HairOrBeard[] m_FemaleElfHairStyles = new HairOrBeard[]
         {
             new HairOrBeard(0x2FCC, 1074389), // Flower
@@ -867,7 +866,6 @@ namespace Server.Gumps
             new HairOrBeard(0x2FCD, 1074390), // Long
             new HairOrBeard(0x2FD1, 1074394)// Spiked
         };
-        #endregion
 
         private static readonly HairOrBeard[] m_HairStyles = new HairOrBeard[]
         {

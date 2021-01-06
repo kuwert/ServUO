@@ -1,4 +1,3 @@
-#region References
 using Server.Commands.Generic;
 using Server.Engines.BulkOrders;
 using Server.Items;
@@ -10,7 +9,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-#endregion
 
 namespace Server.Commands
 {
@@ -242,7 +240,6 @@ namespace Server.Commands
             }
         }
 
-        #region FileSystem
         private static readonly char[] ReplaceChars = "<>".ToCharArray();
 
         public static string GetFileName(string root, string name, string ext)
@@ -301,9 +298,7 @@ namespace Server.Commands
         {
             return new StreamWriter(Path.Combine(m_RootDirectory, path));
         }
-        #endregion
 
-        #region GetPair
         private static readonly string[,] m_Aliases =
         {
             {"System.Object", "<span style=\"color: blue;\">object</span>"},
@@ -439,12 +434,10 @@ namespace Server.Commands
             //Console.WriteLine(">> getpair: "+retval);
             return retval;
         }
-        #endregion
 
         private static Dictionary<Type, TypeInfo> m_Types;
         private static Dictionary<string, List<TypeInfo>> m_Namespaces;
 
-        #region Root documentation
         private static bool Document()
         {
             try
@@ -591,9 +584,7 @@ namespace Server.Commands
                 html.WriteLine("</html>");
             }
         }
-        #endregion
 
-        #region BODs
         private const int Iron = 0xCCCCDD;
         private const int DullCopper = 0xAAAAAA;
         private const int ShadowIron = 0x777799;
@@ -820,7 +811,6 @@ namespace Server.Commands
             }
         }
 
-        #region Tailor Bods
         private static void WriteTailorLBOD(
             StreamWriter html,
             string name,
@@ -1216,9 +1206,7 @@ namespace Server.Commands
 
             html.WriteLine("         </tr>");
         }
-        #endregion
 
-        #region Smith Bods
         private static void WriteSmithLBOD(StreamWriter html, string name, SmallBulkEntry[] entries)
         {
             LargeBOD lbod = new LargeSmithBOD();
@@ -1522,11 +1510,7 @@ namespace Server.Commands
 
             html.WriteLine("         </tr>");
         }
-        #endregion
 
-        #endregion
-
-        #region Bodies
         public static List<BodyEntry> LoadBodies()
         {
             List<BodyEntry> list = new List<BodyEntry>();
@@ -1677,9 +1661,7 @@ namespace Server.Commands
                 html.WriteLine("</html>");
             }
         }
-        #endregion
 
-        #region Speech
         private static void DocumentKeywords()
         {
             List<Dictionary<int, SpeechEntry>> tables = LoadSpeechFile();
@@ -1858,9 +1840,7 @@ namespace Server.Commands
 
             return tables;
         }
-        #endregion
 
-        #region Commands
         public class DocCommandEntry
         {
             private readonly AccessLevel m_AccessLevel;
@@ -2180,7 +2160,6 @@ namespace Server.Commands
 
             html.WriteLine("</tr>");
         }
-        #endregion
 
         private static void LoadTypes(Assembly a, Assembly[] asms)
         {

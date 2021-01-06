@@ -47,16 +47,13 @@ namespace Server.Commands
             {
                 ArrayList list = DecorationListDelete.ReadAll(files[i]);
 
-                #region Mondain's Legacy
                 m_List = list;
-                #endregion
 
                 for (int j = 0; j < list.Count; ++j)
                     m_Count += ((DecorationListDelete)list[j]).Generate(maps);
             }
         }
 
-        #region Mondain's Legacy
         public static Item FindByID(int id)
         {
             if (m_List == null)
@@ -74,7 +71,6 @@ namespace Server.Commands
         }
 
         private static ArrayList m_List;
-        #endregion
 
         private static Mobile m_Mobile;
         private static int m_Count;
@@ -87,7 +83,6 @@ namespace Server.Commands
         private string[] m_Params;
         private ArrayList m_Entries;
 
-        #region Mondain's Legacy
         private Item m_Constructed;
 
         public Item Constructed => m_Constructed;
@@ -110,7 +105,6 @@ namespace Server.Commands
                 return 0;
             }
         }
-        #endregion
 
         private static readonly Type typeofStatic = typeof(Static);
         private static readonly Type typeofLocalizedStatic = typeof(LocalizedStatic);
@@ -135,7 +129,6 @@ namespace Server.Commands
                 {
                     item = new Static(m_ItemID);
                 }
-                #region Mondain's Legacy
                 else if (m_Type == typeof(SecretSwitch))
                 {
                     int id = 0;
@@ -182,7 +175,6 @@ namespace Server.Commands
 
                     item = wall;
                 }
-                #endregion
                 else if (m_Type == typeofLocalizedStatic)
                 {
                     int labelNumber = 0;

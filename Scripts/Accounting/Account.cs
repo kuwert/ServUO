@@ -1,4 +1,3 @@
-#region References
 using Server.Commands;
 using Server.Items;
 using Server.Misc;
@@ -12,7 +11,6 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Xml;
-#endregion
 
 namespace Server.Accounting
 {
@@ -1582,7 +1580,6 @@ namespace Server.Accounting
             }
         }
 
-        #region Gold Account
         /// <summary>
         ///     This amount specifies the value at which point Gold turns to Platinum.
         ///     By default, when 1,000,000,000 Gold is accumulated, it will transform
@@ -1841,9 +1838,7 @@ namespace Server.Accounting
 
             return amount <= totalPlat;
         }
-        #endregion
 
-        #region Secure Account
         public Dictionary<Mobile, int> SecureAccounts;
 
         public static readonly int MaxSecureAmount = 100000000;
@@ -1915,9 +1910,7 @@ namespace Server.Accounting
 
             return false;
         }
-        #endregion
 
-        #region Sovereigns
         /// <summary>
         ///     Sovereigns which can be used at the shard owners disposal. On EA, they are used for curerncy with the Ultima Store
         /// </summary>
@@ -1955,6 +1948,5 @@ namespace Server.Accounting
             Sovereigns -= amount;
             return true;
         }
-        #endregion
     }
 }

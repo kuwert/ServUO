@@ -6,7 +6,6 @@ namespace Server
 {
     public class Firewall
     {
-        #region Firewall Entries
         public interface IFirewallEntry
         {
             bool IsBlocked(IPAddress address);
@@ -154,7 +153,6 @@ namespace Server
                 return m_Entry.GetHashCode();
             }
         }
-        #endregion
 
         private static readonly List<IFirewallEntry> m_Blocked;
 
