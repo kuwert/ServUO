@@ -21,7 +21,6 @@ namespace Server.Engines.Quests
         public override Type[] Quests => new Type[]
                 {
                     typeof(TheyreBreedingLikeRabbitsQuest),
-                    typeof(ThinningTheHerdQuest),
                     typeof(TheyllEatAnythingQuest),
                     typeof(NoGoodFishStealingQuest),
                     typeof(HeroInTheMakingQuest),

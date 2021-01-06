@@ -67,7 +67,6 @@ namespace Server.Engines.Quests
                     typeof(ForcedMigrationQuest),
                     typeof(FineFeastQuest),
                     typeof(HeroInTheMakingQuest),
-                    typeof(ThinningTheHerdQuest),
                     typeof(TheyllEatAnythingQuest),
                     typeof(NoGoodFishStealingQuest),
                     typeof(TheyreBreedingLikeRabbitsQuest),
