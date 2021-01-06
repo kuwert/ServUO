@@ -40,15 +40,6 @@ namespace Server.Engines.CleanUpBritannia
             Rewards.Add(new CollectionItem(typeof(JusticeVirtueTileDeed), 0x14EF, 1080487, 0, 10000));
             Rewards.Add(new CollectionItem(typeof(StewardDeed), 0x14F0, 1153344, 0, 10000));
 
-            Rewards.Add(new CollectionItem(typeof(SorcererArms), 0x13CD, 1151265, 1165, 10000));
-            Rewards.Add(new CollectionItem(typeof(SorcererChest), 0x13CC, 1151266, 1165, 10000));
-            Rewards.Add(new CollectionItem(typeof(SorcererFemaleChest), 0x1C06, 1151267, 1165, 10000));
-            Rewards.Add(new CollectionItem(typeof(SorcererGloves), 0x13C6, 1151268, 1165, 10000));
-            Rewards.Add(new CollectionItem(typeof(SorcererGorget), 0x13C7, 1151264, 1165, 10000));
-            Rewards.Add(new CollectionItem(typeof(SorcererHat), 0x1718, 1151263, 1165, 10000));
-            Rewards.Add(new CollectionItem(typeof(SorcererLegs), 0x13CB, 1151270, 1165, 10000));
-            Rewards.Add(new CollectionItem(typeof(SorcererSkirt), 0x1C08, 1151269, 1165, 10000));
-
             Rewards.Add(new CollectionItem(typeof(YuccaTree), 0x0D37, 1023383, 0, 15000));
             Rewards.Add(new CollectionItem(typeof(TableLamp), 0x49C1, 1151220, 0, 15000));
             Rewards.Add(new CollectionItem(typeof(Bamboo), 0x246D, 1029324, 0, 15000));
