@@ -60,8 +60,6 @@ namespace Server.Engines.Quests
         public CloseEnoughQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(MapFragment), "fragment of a map", 1, typeof(Canir), "Canir (Sanctuary)"));
-
             AddReward(new BaseReward(1074876)); // Knowledge of the legendary minotaur.
         }
 
