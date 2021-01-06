@@ -452,7 +452,6 @@ namespace Server.Engines.Quests
                     typeof(ItsGhastlyJobQuest),
                     typeof(TroglodytesQuest),
                     typeof(UnholyKnightsQuest),
-                    typeof(FriendlyNeighborhoodSpiderkillerQuest),
                     typeof(FeatherInYerCapQuest),
                     typeof(TaleOfTailQuest),
                     typeof(TrogAndHisDogQuest)
