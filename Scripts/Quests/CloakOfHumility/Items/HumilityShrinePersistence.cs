@@ -47,7 +47,6 @@ namespace Server.Engines.Quests
                 {
                     m.SendLocalizedMessage(1075897); // As you near the shrine a strange energy envelops you. Suddenly, your cloak is transformed into the Cloak of Humility!
 
-                    m.Backpack.DropItem(new HumilityCloak());
                     item.Delete();
                 }
             }
