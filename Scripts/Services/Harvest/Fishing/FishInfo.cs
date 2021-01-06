@@ -361,25 +361,6 @@ namespace Server.Items
             for (int i = 0; i < from.Items.Count; i++)
             {
                 Item item = from.Items[i];
-
-                if (item is IFishingAttire)
-                {
-                    if (item is ISetItem)
-                    {
-                        if (((ISetItem)item).SetEquipped)
-                        {
-                            str += ((double)((IFishingAttire)item).SetBonus / 100) / ((ISetItem)item).Pieces;
-                        }
-                        else
-                        {
-                            str += (double)((IFishingAttire)item).BaitBonus / 100;
-                        }
-                    }
-                    else
-                    {
-                        str += (double)((IFishingAttire)item).BaitBonus / 100;
-                    }
-                }
             }
 
             return str;
