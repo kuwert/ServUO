@@ -23,8 +23,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Server\Server.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Items\Artifacts\Equipment\Armor\Sets\" />
-  </ItemGroup>
 </Project>
