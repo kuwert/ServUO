@@ -164,10 +164,7 @@ namespace Server.Engines.Points
             Entries[typeof(AbyssalInfernal)] = new Tuple<double, double>(150, 15.0);
 
             //Quests
-            Entries[typeof(ABrokenVaseQuest)] = new Tuple<double, double>(5, 0.5);
-            Entries[typeof(PuttingThePiecesTogetherQuest)] = new Tuple<double, double>(15, 1.5);
             Entries[typeof(ALittleSomething)] = new Tuple<double, double>(25, 2.5);
-            Entries[typeof(YeOldeGargishQuest)] = new Tuple<double, double>(50, 5.0);
             Entries[typeof(UnusualGoods)] = new Tuple<double, double>(75, 7.5);
         }
 
