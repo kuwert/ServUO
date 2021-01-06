@@ -61,9 +61,9 @@ namespace Server.Engines.Quests
                     typeof(CausticComboQuest),
                     typeof(PlagueLordQuest),
                     typeof(OrcSlayingQuest),
-                    typeof(DreadhornQuest),
                     typeof(PixieDustToDustQuest)
                 };
+
         public override void InitBody()
         {
             InitStats(100, 100, 25);

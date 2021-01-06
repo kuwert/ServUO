@@ -24,13 +24,8 @@ namespace Server.Items
                 return true;
             }
 
-            if (m is PlayerMobile)
+            if (m is PlayerMobile player)
             {
-                PlayerMobile player = (PlayerMobile)m;
-
-                if (QuestHelper.GetQuest(player, typeof(DreadhornQuest)) != null)
-                    return base.OnMoveOver(m);
-
                 player.SendLocalizedMessage(1074274); // You dance in the fairy ring, but nothing happens.
             }
 
