@@ -232,7 +232,6 @@ namespace Server.Engines.Quests
                     typeof(ChillInTheAirQuest),
                     typeof(IndustriousAsAnAntLionQuest),
                     typeof(ThePerilsOfFarmingQuest),
-                    typeof(UnholyConstructQuest),
                     typeof(CommonBrigandsQuest),
                     typeof(ArchEnemiesQuest),
                     typeof(TrollingForTrollsQuest),

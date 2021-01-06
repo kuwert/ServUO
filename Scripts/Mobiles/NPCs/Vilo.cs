@@ -27,7 +27,6 @@ namespace Server.Engines.Quests
                     typeof(SpecimensQuest),
                     typeof(FriendlyNeighborhoodSpiderkillerQuest),
                     typeof(ItsGhastlyJobQuest),
-                    typeof(UnholyConstructQuest),
                     typeof(KingOfBearsQuest),
                     typeof(UnholyKnightsQuest),
                     typeof(FeatherInYerCapQuest),

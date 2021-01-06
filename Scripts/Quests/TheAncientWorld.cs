@@ -64,8 +64,6 @@ namespace Server.Engines.Quests
         public TheGoldenHornQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(MapFragment), "fragment of a map", 1, typeof(Braen), "Braen (The Heartwood)"));
-
             AddReward(new BaseReward(1074876)); // Knowledge of the legendary minotaur.
         }
 
