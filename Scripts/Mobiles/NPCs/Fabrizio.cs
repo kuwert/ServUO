@@ -11,8 +11,6 @@ namespace Server.Engines.Quests
         public GentleBladeQuest()
             : base()
         {
-            AddObjective(new SlayObjective(typeof(Aminia), "warewolf", 1, 10800));
-
             AddReward(new BaseReward(1075363)); // Misericord
         }
 
