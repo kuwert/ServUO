@@ -131,11 +131,9 @@ namespace Server.Engines.Quests
                     typeof(ArachnophobiaQuest),
                     typeof(SquishyQuest),
                     typeof(BigJobQuest),
-                    typeof(VoraciousPlantsQuest),
                     typeof(SpecimensQuest),
                     typeof(ColdHeartedQuest),
                     typeof(MiniSwampThingQuest),
-                    typeof(AnimatedMonstrosityQuest)
                 };
         public override void InitBody()
         {
