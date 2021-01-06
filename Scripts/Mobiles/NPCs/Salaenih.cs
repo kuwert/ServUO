@@ -131,7 +131,6 @@ namespace Server.Engines.Quests
                     typeof(ArachnophobiaQuest),
                     typeof(SquishyQuest),
                     typeof(BigJobQuest),
-                    typeof(SpecimensQuest),
                     typeof(ColdHeartedQuest),
                     typeof(MiniSwampThingQuest),
                 };

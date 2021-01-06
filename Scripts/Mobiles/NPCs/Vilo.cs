@@ -21,15 +21,7 @@ namespace Server.Engines.Quests
         public override Type[] Quests => new Type[]
                 {
                     typeof(IndustriousAsAnAntLionQuest),
-                    typeof(ChillInTheAirQuest),
-                    typeof(TaleOfTailQuest),
-                    typeof(DeadManWalkingQuest),
-                    typeof(SpecimensQuest),
-                    typeof(ItsGhastlyJobQuest),
-                    typeof(KingOfBearsQuest),
-                    typeof(UnholyKnightsQuest),
-                    typeof(FeatherInYerCapQuest),
-                    typeof(RollTheBonesQuest)
+                    typeof(ChillInTheAirQuest)
                 };
         public override void InitBody()
         {

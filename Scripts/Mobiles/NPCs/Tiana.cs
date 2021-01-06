@@ -235,7 +235,6 @@ namespace Server.Engines.Quests
                     typeof(CommonBrigandsQuest),
                     typeof(ArchEnemiesQuest),
                     typeof(TrollingForTrollsQuest),
-                    typeof(DeadManWalkingQuest),
                     typeof(ForkedTonguesQuest),
                     typeof(VerminQuest)
                 };
