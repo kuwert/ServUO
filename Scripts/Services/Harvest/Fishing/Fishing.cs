@@ -191,14 +191,6 @@ namespace Server.Engines.Harvest
                 {
                     foreach (BaseQuest quest in player.Quests)
                     {
-                        if (quest is SomethingFishy && Utility.RandomDouble() < 0.1)
-                        {
-                            Item red = new RedHerring();
-                            from.AddToBackpack(red);
-                            player.SendLocalizedMessage(1095047, "", 0x23); // You pull a shellfish out of the water, but it doesn't have a rainbow pearl.
-                            return true;
-                        }
-
                         if (quest is ScrapingtheBottom && Utility.RandomDouble() < 0.1)
                         {
                             Item mug = new MudPuppy();
@@ -209,7 +201,6 @@ namespace Server.Engines.Harvest
                     }
                 }
 
-                #region High Seas Charydbis
                 if (tool is FishingPole && CharydbisSpawner.SpawnInstance != null && CharydbisSpawner.SpawnInstance.IsSummoned)
                 {
                     Item oracle = from.Backpack.FindItemByType(typeof(OracleOfTheSea));
@@ -240,7 +231,6 @@ namespace Server.Engines.Harvest
                             from.SendLocalizedMessage(1150858); //You see a few bubbles, but no charybdis.
                     }
                 }
-                #endregion
             }
 
             return false;
