@@ -20,10 +20,7 @@ namespace Server.Engines.Quests
 
         public override Type[] Quests => new Type[]
                 {
-                    typeof(GlassyFoeQuest),
-                    typeof(CircleOfLifeQuest),
-                    typeof(DustToDustQuest),
-                    typeof(ArchSupportQuest)
+                    typeof(GlassyFoeQuest)
                 };
         public override void InitBody()
         {

@@ -20,7 +20,6 @@ namespace Server.Engines.Quests
 
         public override Type[] Quests => new Type[]
                 {
-                    typeof(CircleOfLifeQuest)
                 };
         public override void InitBody()
         {
