@@ -65,15 +65,6 @@ namespace Server.Engines.CleanUpBritannia
             Rewards.Add(new CollectionItem(typeof(DragonHeadAddonDeed), 0x2234, 1028756, 0, 50000));
             Rewards.Add(new CollectionItem(typeof(NestWithEggs), 0x1AD4, 1026868, 2415, 50000));
 
-            Rewards.Add(new CollectionItem(typeof(VirtuososArmbands), 0x0308, 1151563, 1374, 50000));
-            Rewards.Add(new CollectionItem(typeof(VirtuososCap), 0x171C, 1151324, 1374, 50000));
-            Rewards.Add(new CollectionItem(typeof(VirtuososCollar), 0x13C7, 1151323, 1374, 50000));
-            Rewards.Add(new CollectionItem(typeof(VirtuososEarpieces), 0x4213, 1151562, 1374, 50000));
-            Rewards.Add(new CollectionItem(typeof(VirtuososKidGloves), 0x13C6, 1151560, 1374, 50000));
-            Rewards.Add(new CollectionItem(typeof(VirtuososKilt), 0x0408, 1151564, 1374, 50000));
-            Rewards.Add(new CollectionItem(typeof(VirtuososNecklace), 0x4213, 1151561, 1374, 50000));
-            Rewards.Add(new CollectionItem(typeof(VirtuososTunic), 0x13CC, 1151325, 1374, 50000));
-
             Rewards.Add(new CollectionItem(typeof(FirePitDeed), 0x29FD, 1080206, 0, 75000));
             Rewards.Add(new CollectionItem(typeof(PresentationStone), 0x32F2, 1154745, 0, 75000));
             Rewards.Add(new CollectionItem(typeof(Beehive), 0x091A, 1080263, 0, 80000));
