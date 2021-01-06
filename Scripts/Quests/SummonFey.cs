@@ -55,8 +55,6 @@ namespace Server.Engines.Quests
         public TokenOfFriendshipQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(GiftForArielle), "gift for Arielle", 1, typeof(Arielle), "Arielle"));
-
             AddReward(new BaseReward(1074874)); // The opportunity to prove yourself worthy of learning to Summon Fey. (Sufficient spellweaving skill is required to cast the spell)
         }
 
