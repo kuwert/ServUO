@@ -20,12 +20,8 @@ namespace Server.Engines.Quests
 
         public override Type[] Quests => new Type[]
                 {
-                    typeof(LethalDartsQuest),
-                    typeof(SimpleBowQuest),
-                    typeof(IngeniousArcheryPartOneQuest),
-                    typeof(IngeniousArcheryPartTwoQuest),
-                    typeof(IngeniousArcheryPartThreeQuest)
                 };
+
         public override void InitBody()
         {
             InitStats(100, 100, 25);
