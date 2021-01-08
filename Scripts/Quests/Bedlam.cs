@@ -143,8 +143,6 @@ namespace Server.Engines.Quests
         public NotQuiteThatEasyQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(SignedTuitionReimbursementForm), "signed tuition reimbursement form", 1, typeof(Gnosos), "Master Gnosos (Bedlam)"));
-
             AddReward(new BaseReward(1074634)); // Tuition Reimbursement
         }
 
