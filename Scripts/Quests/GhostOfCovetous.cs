@@ -8,8 +8,6 @@ namespace Server.Engines.Quests
         public GhostOfCovetousQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(SpiritBottle), "spirit bottle", 1, typeof(Frederic), "The Ghost of Frederic Smithson"));
-
             AddReward(new BaseReward(1075284)); // Return the filled Spirit Bottle to Griswolt the Master Necromancer to receive a reward.
         }
 
