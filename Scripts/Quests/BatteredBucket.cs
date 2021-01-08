@@ -8,8 +8,6 @@ namespace Server.Engines.Quests
         public LostAndFoundQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(BatteredBucket), "battered bucket", 1, typeof(Dallid), "Dallid (Sanctuary)", 600));
-
             AddReward(new BaseReward(typeof(TrinketBag), 1072341));
         }
 
