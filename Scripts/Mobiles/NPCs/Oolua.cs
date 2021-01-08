@@ -60,7 +60,6 @@ namespace Server.Engines.Quests
                     typeof(ParoxysmusArcaneDaemonsQuest),
                     typeof(CausticComboQuest),
                     typeof(PlagueLordQuest),
-                    typeof(OrcSlayingQuest),
                     typeof(PixieDustToDustQuest)
                 };
 

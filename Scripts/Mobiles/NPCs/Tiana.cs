@@ -234,8 +234,6 @@ namespace Server.Engines.Quests
                     typeof(ThePerilsOfFarmingQuest),
                     typeof(CommonBrigandsQuest),
                     typeof(ArchEnemiesQuest),
-                    typeof(TrollingForTrollsQuest),
-                    typeof(ForkedTonguesQuest),
                     typeof(VerminQuest)
                 };
         public override void InitBody()
