@@ -54,8 +54,6 @@ namespace Server.Engines.Quests
         public HeaveHoQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(CrateForSledge), "crates for Sledge", 5, typeof(Sledge), "Sledge (Buc's Den)", 3600));
-
             AddReward(new BaseReward(1074875)); // Another step closer to becoming human.
         }
 
