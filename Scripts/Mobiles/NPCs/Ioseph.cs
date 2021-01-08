@@ -8,8 +8,6 @@ namespace Server.Engines.Quests
         public EmbracingHumanityQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(TreatForDrithen), "treat for Drithen", 1, typeof(Drithen), "Drithen (Umbra)"));
-
             AddReward(new BaseReward(typeof(TreasureBag), 1072583));
         }
 
