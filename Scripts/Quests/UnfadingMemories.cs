@@ -94,7 +94,6 @@ namespace Server.Engines.Quests
         public UnfadingMemoriesThreeQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(BridesLetter), "brides letter", 1, typeof(Emilio), "Artist"));
         }
 
         public override QuestChain ChainID => QuestChain.UnfadingMemories;
