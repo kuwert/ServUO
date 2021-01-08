@@ -9,8 +9,6 @@ namespace Server.Engines.Quests
         public MistakenIdentityQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(TuitionReimbursementForm), "tuition reimbursement form", 1, typeof(Gorrow), "Gorrow (Luna)"));
-
             AddReward(new BaseReward(1074634)); // Tuition Reimbursement
         }
 

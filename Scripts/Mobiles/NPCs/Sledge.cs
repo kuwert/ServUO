@@ -18,8 +18,7 @@ namespace Server.Engines.Quests
 
         public override Type[] Quests => new Type[]
                 {
-                    typeof(IngenuityQuest),
-                    typeof(PointyEarsQuest)
+                    typeof(IngenuityQuest)
                 };
         public override void InitBody()
         {
