@@ -38,7 +38,7 @@ namespace Server.Engines.Quests
 
         public override bool CanOffer()
         {
-            return QuestHelper.CheckDoneOnce(Owner, typeof(RumorsAboundQuest), null, false);
+            return false;
         }
 
         public override void Serialize(GenericWriter writer)
