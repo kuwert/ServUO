@@ -18,10 +18,8 @@ namespace Server.Engines.Quests
 
         public override Type[] Quests => new Type[]
                 {
-                    typeof(SomethingToWailAboutQuest),
-                    typeof(RunawaysQuest),
-                    typeof(ViciousPredatorQuest)
                 };
+
         public override void InitBody()
         {
             InitStats(100, 100, 25);
