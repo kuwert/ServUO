@@ -187,20 +187,6 @@ namespace Server.Engines.Harvest
                     }
                 }
 
-                if (from.Region.IsPartOf("Underworld"))
-                {
-                    foreach (BaseQuest quest in player.Quests)
-                    {
-                        if (quest is ScrapingtheBottom && Utility.RandomDouble() < 0.1)
-                        {
-                            Item mug = new MudPuppy();
-                            from.AddToBackpack(mug);
-                            player.SendLocalizedMessage(1095064, "", 0x23); // You pull a shellfish out of the water, but it doesn't have a rainbow pearl.
-                            return true;
-                        }
-                    }
-                }
-
                 if (tool is FishingPole && CharydbisSpawner.SpawnInstance != null && CharydbisSpawner.SpawnInstance.IsSummoned)
                 {
                     Item oracle = from.Backpack.FindItemByType(typeof(OracleOfTheSea));
