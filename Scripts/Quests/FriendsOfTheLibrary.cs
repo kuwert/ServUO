@@ -184,8 +184,6 @@ namespace Server.Engines.Quests
         public AccessToTheStacksQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(NotarizedApplication), "notarized application", 1, typeof(Verity), "Verity (Britain)"));
-
             AddReward(new BaseReward(typeof(FriendOfTheLibraryToken), 1072749)); // Friends of the Library Membership Token.
         }
 
