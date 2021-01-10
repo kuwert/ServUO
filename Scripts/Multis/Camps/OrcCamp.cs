@@ -57,60 +57,11 @@ namespace Server.Multis
                 AddMobile(Orcs, Utility.RandomMinMax(-7, 7), Utility.RandomMinMax(-7, 7), 0);
             }
             AddMobile(new OrcCaptain(), Utility.RandomMinMax(-7, 7), Utility.RandomMinMax(-7, 7), 0);
-
-            switch (Utility.Random(2))
-            {
-                case 0:
-                    Prisoner = new EscortableNoble();
-                    break;
-                default:
-                    Prisoner = new EscortableSeekerOfAdventure();
-                    break;
-            }
-
-            Prisoner.IsPrisoner = true;
-            Prisoner.CantWalk = true;
-
-            Prisoner.YellHue = Utility.RandomList(0x57, 0x67, 0x77, 0x87, 0x117);
-            AddMobile(Prisoner, Utility.RandomMinMax(-2, 2), Utility.RandomMinMax(-2, 2), 0);
         }
 
         // Don't refresh decay timer
         public override void OnEnter(Mobile m)
         {
-            if (m.Player && Prisoner != null && Prisoner.CantWalk)
-            {
-                int number;
-
-                switch (Utility.Random(8))
-                {
-                    case 0:
-                        number = 502261;
-                        break; // HELP!
-                    case 1:
-                        number = 502262;
-                        break; // Help me!
-                    case 2:
-                        number = 502263;
-                        break; // Canst thou aid me?!
-                    case 3:
-                        number = 502264;
-                        break; // Help a poor prisoner!
-                    case 4:
-                        number = 502265;
-                        break; // Help! Please!
-                    case 5:
-                        number = 502266;
-                        break; // Aaah! Help me!
-                    case 6:
-                        number = 502267;
-                        break; // Go and get some help!
-                    default:
-                        number = 502268;
-                        break; // Quickly, I beg thee! Unlock my chains! If thou dost look at me close thou canst see them.	
-                }
-                Prisoner.Yell(number);
-            }
         }
 
         // Don't refresh decay timer
