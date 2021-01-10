@@ -187,8 +187,6 @@ namespace Server.Engines.Quests
         public EurekaQuest()
             : base()
         {
-            AddObjective(new DeliverObjective(typeof(SealedNotesForJamal), "sealed notes for jamal", 1, typeof(Jamal), "Jamal (near Blighted Grove)"));
-
             AddReward(new BaseReward(1074962)); // A step closer to entering Blighted Grove.
         }
 
