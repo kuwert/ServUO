@@ -68,7 +68,7 @@ namespace Server.Engines.Quests
             Chains[(int)QuestChain.KingVernixQuests] = new Type[] { };
             Chains[(int)QuestChain.DoughtyWarriors] = new Type[] { typeof(DoughtyWarriorsQuest), typeof(DoughtyWarriors2Quest), typeof(DoughtyWarriors3Quest) };
             Chains[(int)QuestChain.HonorOfDeBoors] = new Type[] { typeof(HonorOfDeBoorsQuest), typeof(JackTheVillainQuest), typeof(SavedHonorQuest) };
-            Chains[(int)QuestChain.LaifemTheWeaver] = new Type[] { typeof(ShearingKnowledgeQuest), typeof(WeavingFriendshipsQuest), typeof(NewSpinQuest), };
+            Chains[(int)QuestChain.LaifemTheWeaver] = new Type[] { };
             Chains[(int)QuestChain.CloakOfHumility] = new Type[] { typeof(TheQuestionsQuest), typeof(CommunityServiceMuseumQuest), typeof(CommunityServiceZooQuest), typeof(CommunityServiceLibraryQuest), typeof(WhosMostHumbleQuest) };
             Chains[(int)QuestChain.ValleyOfOne] = new Type[] { typeof(TimeIsOfTheEssenceQuest), typeof(UnitingTheTribesQuest) };
             Chains[(int)QuestChain.MyrmidexAlliance] = new Type[] { typeof(TheZealotryOfZipactriotlQuest), typeof(DestructionOfZipactriotlQuest) };

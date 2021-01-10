@@ -76,23 +76,6 @@ namespace Server.Mobiles
             from.SendLocalizedMessage(500452); // You place the gathered wool into your backpack.
             from.AddToBackpack(new Wool(Map == Map.Felucca ? 2 : 1));
 
-            if (from is PlayerMobile)
-            {
-                PlayerMobile player = (PlayerMobile)from;
-                foreach (BaseQuest quest in player.Quests)
-                {
-                    if (quest is ShearingKnowledgeQuest)
-                    {
-                        if (!quest.Completed &&
-                            (from.Map == Map.Trammel || from.Map == Map.Felucca))
-                        {
-                            from.AddToBackpack(new BritannianWool(1));
-                        }
-                        break;
-                    }
-                }
-            }
-
             NextWoolTime = DateTime.UtcNow + TimeSpan.FromHours(2.0); // TODO: Proper time delay
 
             return true;
