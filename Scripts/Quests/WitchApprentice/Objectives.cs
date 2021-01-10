@@ -46,13 +46,8 @@ namespace Server.Engines.Quests.Hag
                 Effects.SendLocationEffect(m_CorpseLocation, map, 0x3728, 10, 10);
                 Effects.PlaySound(m_CorpseLocation, map, 0x1FE);
 
-                Mobile imp = new Zeefzorpul();
-                imp.MoveToWorld(m_CorpseLocation, map);
-
                 // * You see a strange imp stealing a scrap of paper from the bloodied corpse *
                 m_Corpse.SendLocalizedMessageTo(player, 1055049);
-
-                Timer.DelayCall(TimeSpan.FromSeconds(3.0), new TimerStateCallback(DeleteImp), imp);
             }
         }
 
@@ -222,13 +217,6 @@ namespace Server.Engines.Quests.Hag
 
             Effects.SendLocationEffect(m_ImpLocation, map, 0x3728, 10, 10);
             Effects.PlaySound(m_ImpLocation, map, 0x1FE);
-
-            Mobile imp = new Zeefzorpul();
-            imp.MoveToWorld(m_ImpLocation, map);
-
-            imp.Direction = imp.GetDirectionTo(from);
-
-            Timer.DelayCall(TimeSpan.FromSeconds(3.0), new TimerStateCallback(DeleteImp), imp);
         }
 
         public override void ChildDeserialize(GenericReader reader)
