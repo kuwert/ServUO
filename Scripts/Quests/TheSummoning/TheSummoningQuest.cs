@@ -6,19 +6,16 @@ namespace Server.Engines.Quests.Doom
 {
     public class TheSummoningQuest : QuestSystem
     {
-        private Victoria m_Victoria;
         private bool m_WaitForSummon;
-        public TheSummoningQuest(Victoria victoria, PlayerMobile from)
+        public TheSummoningQuest(PlayerMobile from)
             : base(from)
         {
-            m_Victoria = victoria;
         }
 
         public TheSummoningQuest()
         {
         }
 
-        public Victoria Victoria => m_Victoria;
         public bool WaitForSummon
         {
             get
@@ -81,27 +78,6 @@ namespace Server.Engines.Quests.Doom
                 return 50;
         }
 
-        // NOTE: Quest not entirely OSI-accurate: some changes made to prevent numerous OSI bugs
-        public override void Slice()
-        {
-            if (m_WaitForSummon && m_Victoria != null)
-            {
-                SummoningAltar altar = m_Victoria.Altar;
-
-                if (altar != null && (altar.Daemon == null || !altar.Daemon.Alive))
-                {
-                    if (From.Map == m_Victoria.Map && From.InRange(m_Victoria, 8))
-                    {
-                        m_WaitForSummon = false;
-
-                        AddConversation(new VanquishDaemonConversation());
-                    }
-                }
-            }
-
-            base.Slice();
-        }
-
         public override void Cancel()
         {
             base.Cancel();
@@ -127,7 +103,6 @@ namespace Server.Engines.Quests.Doom
         {
             int version = reader.ReadEncodedInt();
 
-            m_Victoria = reader.ReadMobile() as Victoria;
             m_WaitForSummon = reader.ReadBool();
         }
 
@@ -135,7 +110,6 @@ namespace Server.Engines.Quests.Doom
         {
             writer.WriteEncodedInt(0); // version
 
-            writer.Write(m_Victoria);
             writer.Write(m_WaitForSummon);
         }
     }

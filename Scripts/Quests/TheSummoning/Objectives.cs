@@ -14,32 +14,8 @@ namespace Server.Engines.Quests.Doom
         public override int MaxProgress => 1000;
         public override void OnComplete()
         {
-            Victoria victoria = ((TheSummoningQuest)System).Victoria;
-
-            if (victoria == null)
-            {
-                System.From.SendMessage("Internal error: unable to find Victoria. Quest unable to continue.");
-                System.Cancel();
-            }
-            else
-            {
-                SummoningAltar altar = victoria.Altar;
-
-                if (altar == null)
-                {
-                    System.From.SendMessage("Internal error: unable to find summoning altar. Quest unable to continue.");
-                    System.Cancel();
-                }
-                else if (altar.Daemon == null || !altar.Daemon.Alive)
-                {
-                    System.AddConversation(new VanquishDaemonConversation());
-                }
-                else
-                {
-                    victoria.SayTo(System.From, "The devourer has already been summoned. Return when the devourer has been slain and I will summon it for you.");
-                    ((TheSummoningQuest)System).WaitForSummon = true;
-                }
-            }
+            System.From.SendMessage("Internal error: unable to find Victoria. Quest unable to continue.");
+            System.Cancel();
         }
 
         public override void RenderMessage(BaseQuestGump gump)
@@ -104,16 +80,6 @@ namespace Server.Engines.Quests.Doom
 
         public override void OnComplete()
         {
-            Victoria victoria = ((TheSummoningQuest)System).Victoria;
-
-            if (victoria != null)
-            {
-                SummoningAltar altar = victoria.Altar;
-
-                if (altar != null)
-                    altar.CheckDaemon();
-            }
-
             PlayerMobile from = System.From;
 
             if (!from.Alive)
